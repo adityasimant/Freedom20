@@ -9,13 +9,14 @@
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomBar"
+        android:id="@+id/readableBottomBar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/grey"
+        app:circularflow_defaultRadius="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:circularflow_defaultRadius="3dp"
-        app:menu="@menu/items"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/items" />
 </androidx.constraintlayout.widget.ConstraintLayout>

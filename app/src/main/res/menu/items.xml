@@ -16,8 +16,8 @@
         android:icon="@drawable/ic_baseline_add_box_24"
         />
     <item
-        android:title="@string/qna"
-        android:id="@+id/btnqna"
+        android:title="@string/logs"
+        android:id="@+id/btnlogs"
         android:icon="@drawable/ic_baseline_question_answer_24"
         />
     <item

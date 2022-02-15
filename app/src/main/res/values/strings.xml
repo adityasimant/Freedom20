@@ -3,7 +3,7 @@
     <string name="home">home</string>
     <string name="explore">explore</string>
     <string name="post">post</string>
-    <string name="qna">qna</string>
+    <string name="logs">logs</string>
     <string name="profile">profile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
