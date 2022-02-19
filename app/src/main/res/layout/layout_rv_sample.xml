@@ -7,7 +7,7 @@
     tools:visibility="visible">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgVprofilepic"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_margin="8dp"
@@ -24,10 +24,10 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.25999998" />
+        app:layout_constraintBottom_toBottomOf="@+id/imgVprofilepic"
+        app:layout_constraintStart_toEndOf="@+id/imgVprofilepic"
+        app:layout_constraintTop_toTopOf="@+id/imgVprofilepic"
+        app:layout_constraintVertical_bias="0.16000003" />
 
     <TextView
         android:id="@+id/about"
@@ -39,26 +39,74 @@
         app:layout_constraintTop_toBottomOf="@+id/UserName" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imgVmore"
         android:layout_width="25dp"
         android:layout_height="0dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/imgVprofilepic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_more_vert_24" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/post"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="70dp"
-        android:text="This Iis my first post"
+        android:maxHeight="100dp"
+        android:text="This is my first post"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imgVprofilepic" />
+
+    <TextView
+        android:id="@+id/idUpvote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/ic_baseline_upvote"
+        android:drawablePadding="10dp"
+        android:text="45"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post" />
+
+    <TextView
+        android:id="@+id/idComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/ic_baseline_comment_24"
+        android:drawablePadding="10dp"
+        android:text="5"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/idUpvote"
+        app:layout_constraintTop_toBottomOf="@+id/post" />
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="220dp"
+        android:paddingLeft="5dp"
+        android:textSize="10sp"
+        app:icon="@drawable/ic_baseline_arrow_right_alt_24"
+        app:iconPadding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toEndOf="@+id/idComment"
+        app:layout_constraintTop_toBottomOf="@+id/post"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
