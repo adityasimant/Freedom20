@@ -93,14 +93,16 @@
 
     <Button
         android:id="@+id/btnShare"
-        android:layout_width="38dp"
+        android:layout_width="70dp"
         android:layout_height="38dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="220dp"
+        android:drawableLeft="@drawable/ic_baseline_arrow_right_alt_24"
         android:paddingLeft="5dp"
+        android:text="3"
+        android:textColor="@color/white"
         android:textSize="10sp"
-        app:icon="@drawable/ic_baseline_arrow_right_alt_24"
         app:iconPadding="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"

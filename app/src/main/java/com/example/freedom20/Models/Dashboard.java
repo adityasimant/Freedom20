@@ -2,17 +2,17 @@ package com.example.freedom20.Models;
 
 public class Dashboard {
 
-    int profile, post;
-    String name,bio,like,comment, share;
+    int profile;
+    String post,name,bio,like,comment, share;
 
-    public Dashboard(int profile, int post, String name, String bio, String like, String comment, String share) {
+    public Dashboard(int profile, String post, String name, String bio, String like, String comment, String share) {
         this.profile = profile;
         this.post = post;
         this.name = name;
         this.bio = bio;
         this.like = like;
         this.comment = comment;
-        this.share = share;
+//        this.share = share;
     }
 
     public int getProfile() {
@@ -23,11 +23,11 @@ public class Dashboard {
         this.profile = profile;
     }
 
-    public int getPost() {
+    public String getPost() {
         return post;
     }
 
-    public void setPost(int post) {
+    public void setPost(String post) {
         this.post = post;
     }
 
@@ -63,11 +63,11 @@ public class Dashboard {
         this.comment = comment;
     }
 
-    public String getShare() {
-        return share;
-    }
-
-    public void setShare(String share) {
-        this.share = share;
-    }
+//    public String getShare() {
+//        return share;
+//    }
+//
+//    public void setShare(String share) {
+//        this.share = share;
+//    }
 }
