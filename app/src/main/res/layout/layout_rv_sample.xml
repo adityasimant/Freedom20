@@ -4,111 +4,152 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    app:cardCornerRadius="5dp"
     tools:visibility="visible">
 
 
-    <ImageView
-        android:id="@+id/imgVprofilepic"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_margin="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_account_circle_24" />
 
-    <TextView
-        android:id="@+id/UserName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:text="Alison Parker"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imgVprofilepic"
-        app:layout_constraintStart_toEndOf="@+id/imgVprofilepic"
-        app:layout_constraintTop_toTopOf="@+id/imgVprofilepic"
-        app:layout_constraintVertical_bias="0.16000003" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/about"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Professional Trader"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/UserName"
-        app:layout_constraintTop_toBottomOf="@+id/UserName" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/imgVmore"
-        android:layout_width="25dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imgVprofilepic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_more_vert_24" />
+            <ImageView
+                android:id="@+id/imgVprofilepic"
+                android:layout_width="50dp"
+                android:layout_height="62dp"
+                android:layout_margin="8dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_account_circle_24" />
 
-    <TextView
-        android:id="@+id/post"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="70dp"
-        android:maxHeight="100dp"
-        android:text="This is my first post"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgVprofilepic" />
+            <LinearLayout
+                android:layout_width="313dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/idUpvote"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:drawableLeft="@drawable/ic_baseline_upvote"
-        android:drawablePadding="10dp"
-        android:text="45"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/post" />
+                <TextView
+                    android:id="@+id/UserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
+                    android:padding="5dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Alison Parker"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgVprofilepic"
+                    app:layout_constraintStart_toEndOf="@+id/imgVprofilepic"
+                    app:layout_constraintTop_toTopOf="@+id/imgVprofilepic"
+                    app:layout_constraintVertical_bias="0.16000003" />
 
-    <TextView
-        android:id="@+id/idComment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
-        android:drawableLeft="@drawable/ic_baseline_comment_24"
-        android:drawablePadding="10dp"
-        android:text="5"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/idUpvote"
-        app:layout_constraintTop_toBottomOf="@+id/post" />
+                <TextView
+                    android:id="@+id/about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Professional Trader"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/UserName"
+                    app:layout_constraintTop_toBottomOf="@+id/UserName" />
+            </LinearLayout>
 
-    <Button
-        android:id="@+id/btnShare"
-        android:layout_width="70dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="220dp"
-        android:drawableLeft="@drawable/ic_baseline_arrow_right_alt_24"
-        android:paddingLeft="5dp"
-        android:text="3"
-        android:textColor="@color/white"
-        android:textSize="10sp"
-        app:iconPadding="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toEndOf="@+id/idComment"
-        app:layout_constraintTop_toBottomOf="@+id/post"
-        tools:ignore="SpeakableTextPresentCheck" />
+            <ImageView
+                android:id="@+id/imgVmore"
+                android:layout_width="25dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgVprofilepic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_more_vert_24" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/post"
+            android:layout_width="339dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="70dp"
+            android:maxHeight="100dp"
+            android:text="This is my first post"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgVprofilepic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/idUpvote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:padding="4dp"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/ic_baseline_upvote"
+                android:drawablePadding="10dp"
+                android:text="45"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/post" />
+
+            <TextView
+                android:id="@+id/idComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:padding="5dp"
+                android:drawableLeft="@drawable/ic_baseline_comment_24"
+                android:drawablePadding="10dp"
+                android:text="5"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/idUpvote"
+                app:layout_constraintTop_toBottomOf="@+id/post" />
+
+            <Button
+                android:id="@+id/btnShare"
+                android:layout_width="70dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="220dp"
+                android:drawableLeft="@drawable/ic_baseline_arrow_right_alt_24"
+                android:paddingLeft="5dp"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:iconPadding="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.444"
+                app:layout_constraintStart_toEndOf="@+id/idComment"
+                app:layout_constraintTop_toBottomOf="@+id/post"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
+
+    </LinearLayout>
 </androidx.cardview.widget.CardView>
