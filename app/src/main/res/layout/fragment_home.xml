@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:background="@color/grey"
             android:paddingBottom="10dp">
-
+<!--            for commit-->
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
