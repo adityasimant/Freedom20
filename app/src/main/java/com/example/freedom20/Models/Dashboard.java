@@ -63,11 +63,11 @@ public class Dashboard {
         this.comment = comment;
     }
 
-//    public String getShare() {
-//        return share;
-//    }
-//
-//    public void setShare(String share) {
-//        this.share = share;
-//    }
+    public String getShare() {
+        return share;
+    }
+
+    public void setShare(String share) {
+        this.share = share;
+    }
 }

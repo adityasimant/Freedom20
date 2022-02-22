@@ -42,7 +42,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
         holder.bio.setText(model.getBio());
         holder.upvote.setText(model.getLike());
         holder.comment.setText(model.getComment());
-//        holder.share .setText(model.getShare());
+        holder.share .setText(model.getShare());
     }
 
     @Override
@@ -64,7 +64,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
             post = itemView.findViewById(R.id.post);
             upvote = itemView.findViewById(R.id.idUpvote);
             comment = itemView.findViewById(R.id.idComment);
-//            share = itemView.findViewById(R.id.btnShare);
+            share = itemView.findViewById(R.id.btnShare);
 
 
         }
