@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Freedom20</string>
-    <string name="home">home</string>
-    <string name="explore">explore</string>
-    <string name="post">post</string>
-    <string name="logs">logs</string>
-    <string name="profile">profile</string>
+    <string name="home">HOME</string>
+    <string name="explore">EXPLORE</string>
+    <string name="post">POST</string>
+    <string name="logs">LOGS</string>
+    <string name="profile">PROFILE</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
