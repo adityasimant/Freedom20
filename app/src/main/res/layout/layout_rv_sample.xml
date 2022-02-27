@@ -10,10 +10,10 @@
     tools:visibility="visible">
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/Darkgrey"
         android:orientation="vertical">
 
         <LinearLayout
@@ -36,18 +36,20 @@
                 android:layout_width="313dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@color/Darkgrey"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/UserName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="16dp"
+                    android:background="@color/Darkgrey"
                     android:padding="5dp"
-                    android:layout_marginLeft="8dp"
                     android:text="Alison Parker"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/imgVprofilepic"
@@ -60,10 +62,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:padding="3dp"
                     android:layout_marginBottom="10dp"
+                    android:background="@color/Darkgrey"
+                    android:padding="3dp"
                     android:text="Professional Trader"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="@+id/UserName"
                     app:layout_constraintTop_toBottomOf="@+id/UserName" />
             </LinearLayout>
@@ -88,9 +91,10 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="70dp"
+            android:background="@color/Darkgrey"
             android:maxHeight="100dp"
             android:text="This is my first post"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -99,6 +103,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/Darkgrey"
             android:orientation="horizontal">
 
             <TextView
@@ -106,12 +111,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:padding="4dp"
                 android:layout_marginTop="16dp"
+                android:background="@color/Darkgrey"
                 android:drawableLeft="@drawable/ic_baseline_upvote"
                 android:drawablePadding="10dp"
+                android:padding="4dp"
                 android:text="45"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/post" />
@@ -122,11 +128,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="16dp"
-                android:padding="5dp"
+                android:background="@color/Darkgrey"
                 android:drawableLeft="@drawable/ic_baseline_comment_24"
                 android:drawablePadding="10dp"
+                android:padding="5dp"
                 android:text="5"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/idUpvote"
                 app:layout_constraintTop_toBottomOf="@+id/post" />
