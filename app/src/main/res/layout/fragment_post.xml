@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/Darkgrey"
     tools:context=".fragments.fragments.PostFragment">
 
 
@@ -13,17 +14,21 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
+        android:background="@color/Darkgrey"
         android:layout_marginEnd="10dp"
         android:gravity="center_horizontal"
         android:text="Create New Post"
-        android:textColor="@color/black"
+        android:textColor="@color/grey"
         android:textSize="24sp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etpost"
         android:layout_width="match_parent"
         android:layout_height="207dp"
+        android:background="@color/Darkgrey"
+        android:textColorHint="@color/grey"
+        android:padding="5dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -42,22 +47,24 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnreset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/YELLOW"
+            android:backgroundTint="@color/grey"
             android:text="Reset"
-            android:textColor="@color/green"
+            android:textColor="@color/Darkgrey"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey"
             android:layout_marginStart="5dp"
             android:layout_weight="1"
+            android:textColor="@color/Darkgrey"
             android:text="Post"
             android:textStyle="bold" />
     </LinearLayout>

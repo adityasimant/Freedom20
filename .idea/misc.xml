@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.187" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/drawable/ic_baseline_add_box_24.xml" value="0.187" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/drawable/ic_baseline_more_vert_24.xml" value="0.2315" />
+        <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/drawable/ic_launcher_background.xml" value="0.187" />
+        <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/drawable/ic_logo1_background.xml" value="0.144" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/activity_main.xml" value="0.22685185185185186" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/fragment_explore.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/fragment_home.xml" value="0.264" />
@@ -14,6 +17,7 @@
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/fragment_zerodha_.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/layout_rv_sample.xml" value="0.4" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/menu/items.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/mipmap-anydpi-v26/ic_logo1.xml" value="0.16799999999999998" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/xml/tabs.xml" value="0.23229166666666667" />
       </map>
     </option>
