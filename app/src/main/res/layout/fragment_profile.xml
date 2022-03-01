@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragments.fragments.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:elevation="12dp"-->
+<!--        android:id="@+id/view2"-->
+<!--        app:cardCornerRadius="40dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:innerRadius="0dp"-->
+<!--        android:shape="ring"-->
+<!--        android:thicknessRatio="1.9">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView1"-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:src="@drawable/ic_baseline_account_circle_24"/>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Profile Fragment Work In progress"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/Darkgrey"
+        android:padding="6dp"
+        android:text="Profile"
+        android:textColor="@color/grey"
         android:textSize="20sp"
-        android:textColor="@color/green"
         android:textStyle="bold" />
-
-
-</FrameLayout>
+</LinearLayout>
