@@ -61,7 +61,7 @@
                     android:id="@+id/about"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="7dp"
                     android:layout_marginBottom="10dp"
                     android:background="@color/Darkgrey"
                     android:padding="3dp"
@@ -86,9 +86,9 @@
 
         <TextView
             android:id="@+id/post"
-            android:layout_width="339dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="70dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="70dp"
             android:background="@color/Darkgrey"

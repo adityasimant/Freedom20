@@ -9,8 +9,6 @@
     tools:context=".fragments.fragments.ProfileFragment">
 
 
-
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
@@ -34,8 +32,8 @@
             android:id="@+id/view2"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginStart="7dp"
             android:layout_centerHorizontal="true"
+            android:layout_marginStart="7dp"
             android:elevation="12dp"
             android:innerRadius="0dp"
             android:shape="ring"
@@ -62,27 +60,27 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textColor="@color/grey"
-                android:background="@color/Darkgrey"
-                android:textSize="20dp"
-                android:padding="5dp"
-                android:layout_marginBottom="5dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:text="Alison Parker" />
+                android:layout_marginBottom="5dp"
+                android:background="@color/Darkgrey"
+                android:padding="5dp"
+                android:text="Alison Parker"
+                android:textColor="@color/grey"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
                 android:layout_marginStart="10dp"
-                android:padding="5dp"
+                android:layout_marginEnd="10dp"
                 android:background="@color/Darkgrey"
+                android:padding="5dp"
+                android:text="TextView"
                 android:textColor="@color/grey"
-                android:textSize="16dp"
-                android:text="TextView" />
+                android:textSize="16dp" />
         </LinearLayout>
 
     </LinearLayout>
@@ -94,18 +92,20 @@
         android:layout_marginStart="70dp"
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/YELLOW"
-        android:textColor="@color/Darkgrey"
         android:text="Edit profile"
-        android:textStyle="bold"/>
+        android:textColor="@color/Darkgrey"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
             android:orientation="vertical">
 
 
@@ -117,19 +117,24 @@
                 android:layout_marginStart="5dp"
                 android:text="Following"
                 android:textColor="@color/grey"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="7"
+                android:textColor="@color/grey"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:orientation="vertical">
 
 
@@ -141,19 +146,24 @@
                 android:layout_marginStart="5dp"
                 android:text="Followers"
                 android:textColor="@color/grey"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="56"
+                android:textColor="@color/grey"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:orientation="vertical">
 
 
@@ -165,15 +175,27 @@
                 android:layout_marginStart="5dp"
                 android:text="Post"
                 android:textColor="@color/grey"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView27"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="500"
+                android:textColor="@color/grey"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/grey" />
 
 </LinearLayout>

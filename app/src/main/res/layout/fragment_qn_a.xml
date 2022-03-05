@@ -41,6 +41,111 @@
                 android:background="@color/white" />
 
             <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/Darkgrey"
+                app:cardCornerRadius="18dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/Darkgrey"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/Darkgrey"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="178dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/Darkgrey"
+                            app:cardCornerRadius="25dp">
+
+                            <ImageView
+                                android:id="@+id/stockImg"
+                                android:layout_width="match_parent"
+                                android:layout_height="117dp"
+                                android:adjustViewBounds="true"
+                                android:background="@color/Darkgrey"
+                                android:src="@drawable/booksimg" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/cardtitle"
+                            android:layout_width="177dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center_horizontal"
+                            android:text="Library"
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/aboutCard"
+                            android:layout_width="177dp"
+                            android:layout_height="70dp"
+                            android:layout_marginStart="5dp"
+
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="Choose from a large collection of books that
+                            can help you boost up ..!!"
+                            android:textColor="@color/white" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginTop="30dp"
+                            android:gravity="bottom"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btnclickcard1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="30dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/YELLOW"
+                                android:textColor="@color/Darkgrey"
+                                android:text="Discover Books"
+                                app:iconSize="25dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/edgeview"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/white" />
+
+
+            <androidx.cardview.widget.CardView
                 android:id="@+id/stockCard"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
@@ -76,7 +181,7 @@
                                 android:layout_height="117dp"
                                 android:adjustViewBounds="true"
                                 android:background="@color/Darkgrey"
-                                android:src="@drawable/ic_img" />
+                                android:src="@drawable/stockimg" />
                         </androidx.cardview.widget.CardView>
 
                         <TextView
@@ -166,129 +271,6 @@
                 android:layout_marginEnd="16dp"
                 android:background="@color/grey" />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@color/Darkgrey"
-                app:cardCornerRadius="18dp">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/Darkgrey"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@color/Darkgrey"
-                        android:orientation="vertical">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="178dp"
-                            android:layout_height="100dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="10dp"
-                            android:background="@color/Darkgrey"
-                            app:cardCornerRadius="25dp">
-
-                            <ImageView
-                                android:id="@+id/stockImg"
-                                android:layout_width="match_parent"
-                                android:layout_height="117dp"
-                                android:adjustViewBounds="true"
-                                android:background="@color/Darkgrey"
-                                android:src="@drawable/businessimg" />
-                        </androidx.cardview.widget.CardView>
-
-                        <TextView
-                            android:id="@+id/cardtitle"
-                            android:layout_width="177dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="15dp"
-                            android:gravity="center_horizontal"
-                            android:text="Entrepreurship"
-                            android:textColor="@color/white"
-                            android:textSize="17sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/siteinfo"
-                            android:layout_width="183dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="10dp"
-                            android:gravity="center_horizontal"
-                            android:text="Learn with zerodha varsity"
-
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/aboutCard"
-                            android:layout_width="177dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-
-                            android:layout_marginTop="10dp"
-                            android:layout_marginEnd="16dp"
-                            android:text="[E]ntrepreneurs throughout modern economic history have been
-                            disproportionately responsible for truly radical innovations. Learn more about it here ..!! "
-                            android:textColor="@color/white" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:layout_marginStart="50dp"
-                            android:layout_marginTop="30dp"
-                            android:gravity="bottom"
-                            android:orientation="horizontal">
-
-                            <Button
-                                android:id="@+id/btninfocard1"
-                                android:layout_width="50dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="10dp"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/YELLOW"
-                                app:icon="@android:drawable/ic_dialog_info"
-                                app:iconPadding="18dp"
-                                app:iconSize="20dp" />
-
-                            <Button
-                                android:id="@+id/btnclickcard1"
-                                android:layout_width="50dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/YELLOW"
-                                app:icon="@drawable/ic_baseline_arrow_right_alt_24"
-                                app:iconSize="25dp" />
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <View
-                android:id="@+id/edgeview"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/white" />
 
 
         </LinearLayout>
