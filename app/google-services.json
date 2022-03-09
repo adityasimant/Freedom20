@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "660454778852",
+    "project_id": "freedom20-1dc06",
+    "storage_bucket": "freedom20-1dc06.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660454778852:android:0a5fafee7510a2694149f1",
+        "android_client_info": {
+          "package_name": "com.example.freedom20"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "660454778852-5r6u9p60vkq4v3pkmrt6idvtfli2um4m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfeY2kq-p_iRft1Zgml5vwUqIhwmB3AAg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "660454778852-5r6u9p60vkq4v3pkmrt6idvtfli2um4m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

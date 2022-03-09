@@ -36,7 +36,7 @@
 
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -48,7 +48,7 @@
         android:textColorHint="@color/grey"
         />
     <EditText
-        android:id="@+id/editTextTextPersonName13"
+        android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -61,7 +61,7 @@
         />
 
     <EditText
-        android:id="@+id/editTextTextPersonName43"
+        android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -72,7 +72,7 @@
         android:inputType="textEmailAddress"
         android:textColorHint="@color/grey" />
     <EditText
-        android:id="@+id/editTextTextPersonName14"
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -86,14 +86,14 @@
 
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnSignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="20dp"
         android:backgroundTint="@color/YELLOW"
-        android:text="Login"
+        android:text="Sign up"
         android:textColor="@color/Darkgrey"
         android:textSize="16dp"
         android:textStyle="bold" />
