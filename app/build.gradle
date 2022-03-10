@@ -55,5 +55,8 @@ dependencies {
     // database
     implementation platform('com.google.firebase:firebase-bom:29.1.0')
     implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-core:9.6.1'
 
 }
+apply plugin: 'com.google.gms.google-services'

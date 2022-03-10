@@ -26,6 +26,7 @@
         android:id="@+id/etpost"
         android:layout_width="match_parent"
         android:layout_height="207dp"
+        android:textColor="@color/grey"
         android:background="@color/Darkgrey"
         android:textColorHint="@color/grey"
         android:padding="5dp"
