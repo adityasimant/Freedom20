@@ -23,7 +23,7 @@
         android:id="@+id/readableBottomBar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/grey"
+        android:background="@color/Darkgrey"
         app:circularflow_defaultRadius="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

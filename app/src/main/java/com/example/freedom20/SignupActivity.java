@@ -35,27 +35,31 @@ public class SignupActivity extends AppCompatActivity {
         binding.btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                    try {
+                        auth.createUserWithEmailAndPassword(binding.etEmail.getText().toString(), binding.etPassword.getText().toString())
+                                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        if (task.isSuccessful()) {
+                                            User user = new User(binding.etUsername.getText().toString(),
+                                                    binding.etEmail.getText().toString(),
+                                                    binding.etName.getText().toString(),
+                                                    binding.etPassword.getText().toString());
+                                            String id = task.getResult().getUser().getUid();
+                                            database.getReference().child("user").child(id).setValue(user);
+                                            Toast.makeText(SignupActivity.this, "User added succesfully", Toast.LENGTH_SHORT).show();
+                                            Intent intent = new Intent(SignupActivity.this,MainActivity.class);
+                                            startActivity(intent);
+                                        } else {
+                                            Toast.makeText(SignupActivity.this, "An error occured ", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
 
-//                String email = binding.etEmail.getText().toString();
-//                String password = binding.etPassword.getText().toString();
-                auth.createUserWithEmailAndPassword(binding.etEmail.getText().toString(),binding.etPassword.getText().toString())
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
-                            User user = new User(binding.etUsername.getText().toString(),
-                                    binding.etEmail.getText().toString(),
-                                    binding.etName.getText().toString(),
-                                    binding.etPassword.getText().toString());
-                            String id = task.getResult().getUser().getUid();
-                            database.getReference().child("user").child(id).setValue(user);
-                            Toast.makeText(SignupActivity.this, "User added succesfully", Toast.LENGTH_SHORT).show();
-                        }
-                        else{
-                            Toast.makeText(SignupActivity.this, "An error occured ", Toast.LENGTH_SHORT).show();
-                        }
                     }
-                });
+                    catch(Exception ex){
+                        Toast.makeText(SignupActivity.this,"error", Toast.LENGTH_SHORT).show();
+                    }
             }
         });
 
