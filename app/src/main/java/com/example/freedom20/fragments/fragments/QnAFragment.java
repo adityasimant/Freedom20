@@ -4,18 +4,25 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.freedom20.Adapter.BooksAdapter;
+import com.example.freedom20.Models.BooksModel;
 import com.example.freedom20.R;
 import com.example.freedom20.zerodha_Fragment;
 
+import java.util.ArrayList;
+
 public class QnAFragment extends Fragment {
 
-
+    RecyclerView BooksRV;
+    ArrayList<BooksModel> booksList;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -66,6 +73,22 @@ public class QnAFragment extends Fragment {
 //                Fr.commit();
 //            }
 //        });
+
+
+        BooksRV = view.findViewById(R.id.BooksRv);
+        booksList = new ArrayList<>();
+
+        booksList.add(new BooksModel(R.drawable.stockimg,"This is Header","This is web","this is info"));
+        booksList.add(new BooksModel(R.drawable.stockimg,"This is Header","This is web","this is info"));
+        booksList.add(new BooksModel(R.drawable.stockimg,"This is Header","This is web","this is info"));
+        booksList.add(new BooksModel(R.drawable.stockimg,"This is Header","This is web","this is info"));
+        booksList.add(new BooksModel(R.drawable.stockimg,"This is Header","This is web","this is info"));
+
+        BooksAdapter adapter = new BooksAdapter(booksList,getContext());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        BooksRV.setLayoutManager(layoutManager);
+        BooksRV.setNestedScrollingEnabled(false);
+        BooksRV.setAdapter(adapter);
         return view;
     }
 }
