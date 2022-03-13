@@ -5,20 +5,25 @@
       <map>
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.187" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/drawable/ic_baseline_add_box_24.xml" value="0.187" />
+        <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/drawable/ic_baseline_explore_24.xml" value="0.188" />
+        <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.188" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/drawable/ic_baseline_more_vert_24.xml" value="0.2315" />
+        <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/drawable/ic_home_one.xml" value="0.188" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/drawable/ic_launcher_background.xml" value="0.187" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/drawable/ic_logo1_background.xml" value="0.144" />
+        <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/drawable/ic_option.xml" value="0.188" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.23984375" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout-w936dp/activity_login.xml" value="0.17421875" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/activity_login.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/activity_main.xml" value="0.22685185185185186" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/activity_signup.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/activity_web.xml" value="0.21822916666666667" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/books_sample_layout.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/fragment_explore.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/fragment_post.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/fragment_profile.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/fragment_qn_a.xml" value="0.1" />
+        <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/fragment_qn_a.xml" value="0.264" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/fragment_zerodha_.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/layout_books_sample.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/icon/AndroidStudioProjects/Freedom202/app/src/main/res/layout/layout_rv_sample.xml" value="0.4" />
