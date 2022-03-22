@@ -2,32 +2,28 @@ package com.example.freedom20.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentResultOwner;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.freedom20.Models.BooksModel;
+import com.example.freedom20.Models.LogsModel;
 import com.example.freedom20.R;
 import com.example.freedom20.WebActivity;
 
 import java.util.ArrayList;
 
-public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.viewHolder> {
+public class LogsAdapter extends RecyclerView.Adapter<LogsAdapter.viewHolder> {
 
-    ArrayList <BooksModel> list;
+    ArrayList <LogsModel> list;
     Context context;
 
-    public BooksAdapter(ArrayList<BooksModel> list, Context context) {
+    public LogsAdapter(ArrayList<LogsModel> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -41,7 +37,7 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.viewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
-        BooksModel model = list.get(position);
+        LogsModel model = list.get(position);
         holder.image.setImageResource(model.getImg());
         holder.header.setText(model.getHeader());
         holder.webabt.setText(model.getWebsiteabt());

@@ -111,7 +111,7 @@
         android:inputType="textPersonName"
         android:textColor="@color/grey"
         android:textColorHint="@color/grey"
-        app:layout_constraintBottom_toTopOf="@+id/btnSignin"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -148,7 +148,7 @@
 
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignin">
+        app:layout_constraintTop_toBottomOf="@+id/btnSignup">
 
         <TextView
             android:id="@+id/textView10"

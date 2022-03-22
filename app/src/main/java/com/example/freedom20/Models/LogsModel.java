@@ -1,11 +1,11 @@
 package com.example.freedom20.Models;
 
-public class BooksModel {
+public class LogsModel {
 
-    int img,btnclick;
+    int img;
     String header,websiteabt,info;
 
-    public BooksModel(int img,String header, String websiteabt, String info) {
+    public LogsModel(int img, String header, String websiteabt, String info) {
         this.img = img;
         this.header = header;
         this.websiteabt = websiteabt;

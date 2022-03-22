@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/Darkgrey"
     android:orientation="vertical"
     tools:context=".fragments.fragments.QnAFragment">
@@ -11,27 +11,24 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/editTextTextPersonName2"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_margin="10dp"
-                android:drawableEnd="@drawable/ic_baseline_search_24"
-                android:ems="10"
-                android:hint="Search..."
-                android:inputType="textPersonName"
-                android:padding="7dp"
-                android:paddingEnd="20dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white" />
-
+                android:layout_height="wrap_content"
+                android:text="Freedom 20"
+                android:background="@color/Darkgrey"
+                android:textColor="@color/grey"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:padding="10dp"
+                android:gravity="center_horizontal"
+                />
             <View
                 android:id="@+id/view2"
                 android:layout_width="match_parent"
@@ -40,111 +37,59 @@
                 android:layout_marginEnd="16dp"
                 android:background="@color/white" />
 
-            <androidx.cardview.widget.CardView
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Financial Books :"
                 android:background="@color/Darkgrey"
-                app:cardCornerRadius="18dp">
+                android:textColor="@color/grey"
+                android:textSize="20dp"
+                android:layout_margin="2dp"
+                android:padding="3dp"
+                android:textStyle="bold"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/books1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:background="@color/grey"/>
+ <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Self-help Books :"
+                android:background="@color/Darkgrey"
+                android:textColor="@color/grey"
+                android:textSize="20dp"
+                android:layout_margin="2dp"
+                android:padding="3dp"
+                android:textStyle="bold"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/books2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:background="@color/grey"/>
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/Darkgrey"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@color/Darkgrey"
-                        android:orientation="vertical">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="178dp"
-                            android:layout_height="100dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="10dp"
-                            android:background="@color/Darkgrey"
-                            app:cardCornerRadius="25dp">
-
-                            <ImageView
-                                android:id="@+id/stockImg"
-                                android:layout_width="match_parent"
-                                android:layout_height="117dp"
-                                android:adjustViewBounds="true"
-                                android:background="@color/Darkgrey"
-                                android:src="@drawable/booksimg" />
-                        </androidx.cardview.widget.CardView>
-
-                        <TextView
-                            android:id="@+id/cardtitle"
-                            android:layout_width="177dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="15dp"
-                            android:gravity="center_horizontal"
-                            android:text="Library"
-                            android:textColor="@color/white"
-                            android:textSize="17sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/aboutCard"
-                            android:layout_width="177dp"
-                            android:layout_height="70dp"
-                            android:layout_marginStart="5dp"
-
-                            android:layout_marginTop="10dp"
-                            android:layout_marginEnd="16dp"
-                            android:text="Choose from a large collection of books that
-                            can help you boost up ..!!"
-                            android:textColor="@color/white" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:layout_marginStart="50dp"
-                            android:layout_marginTop="30dp"
-                            android:gravity="bottom"
-                            android:orientation="horizontal">
-
-                            <Button
-                                android:id="@+id/btnBooks"
-                                android:layout_width="140dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="30dp"
-                                android:layout_weight="1"
-                                android:backgroundTint="@color/YELLOW"
-                                android:text="Discover Books"
-                                android:textColor="@color/Darkgrey"
-                                app:iconSize="25dp" />
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/BooksRv"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="1dp"
                 />
 
 
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>
+
+
