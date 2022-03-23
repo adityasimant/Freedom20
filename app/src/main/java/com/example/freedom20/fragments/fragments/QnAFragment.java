@@ -59,7 +59,7 @@ public class QnAFragment extends Fragment {
 //        LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         BooksRV.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
         BooksRV.setNestedScrollingEnabled(false);
-        BooksRV.setHasFixedSize(false);
+        BooksRV.setHasFixedSize(true);
         BooksRV.setAdapter(adapter);
 
 

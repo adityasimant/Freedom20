@@ -2,19 +2,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/bookcard"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"  >
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
     <androidx.cardview.widget.CardView
-        android:layout_width="150dp"
-        android:layout_height="230dp"
+        android:layout_width="120dp"
+        android:layout_height="200dp"
         android:layout_margin="5dp"
-        android:backgroundTint="#BFBFBF"
+        android:backgroundTint="@color/black"
         app:cardCornerRadius="7dp"
-
         app:cardElevation="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="241dp"
+            android:layout_height="200dp"
             android:orientation="vertical">
 
             <ImageView
@@ -22,6 +22,7 @@
                 android:layout_width="103dp"
                 android:layout_height="140dp"
                 android:layout_margin="7dp"
+                android:layout_gravity="center_horizontal"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/booksimg" />
 
@@ -34,8 +35,8 @@
                 android:paddingStart="3dp"
                 android:paddingEnd="3dp"
                 android:text="Rich dad poor dad"
-                android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:textSize="12dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -46,9 +47,10 @@
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="5dp"
                 android:text="Robert kiyosaki"
+                android:layout_gravity="center_horizontal"
                 android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15dp" />
+                android:textColor="@color/grey"
+                android:textSize="10dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.cardview.widget.CardView>
