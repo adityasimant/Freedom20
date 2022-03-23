@@ -9,7 +9,7 @@
     tools:context=".fragments.fragments.QnAFragment">
 
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -21,14 +21,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Freedom 20"
                 android:background="@color/Darkgrey"
-                android:textColor="@color/grey"
-                android:textStyle="bold"
-                android:textSize="25dp"
-                android:padding="10dp"
                 android:gravity="center_horizontal"
-                />
+                android:padding="10dp"
+                android:text="Freedom 20"
+                android:textColor="@color/grey"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
             <View
                 android:id="@+id/view2"
                 android:layout_width="match_parent"
@@ -41,55 +41,53 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="2dp"
                 android:layout_marginTop="10dp"
-                android:text="Financial Books :"
                 android:background="@color/Darkgrey"
+                android:padding="3dp"
+                android:text="Financial Books :"
                 android:textColor="@color/grey"
                 android:textSize="20dp"
-                android:layout_margin="2dp"
-                android:padding="3dp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/books1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_margin="10dp"
-                android:background="@color/grey"/>
- <TextView
+                android:background="@color/grey"
+                android:orientation="horizontal" />
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Self-help Books :"
+                android:layout_margin="2dp"
                 android:background="@color/Darkgrey"
+                android:padding="3dp"
+                android:text="Self-help Books :"
                 android:textColor="@color/grey"
                 android:textSize="20dp"
-                android:layout_margin="2dp"
-                android:padding="3dp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/books2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_margin="10dp"
-                android:background="@color/grey"/>
-
+                android:background="@color/grey"
+                android:orientation="horizontal" />
 
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/BooksRv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                />
+                android:nestedScrollingEnabled="false"
+                android:layout_margin="1dp" />
 
 
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>
 
 
