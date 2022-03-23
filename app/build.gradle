@@ -57,6 +57,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-database'
     implementation 'com.google.firebase:firebase-core:9.6.1'
+    implementation 'com.google.firebase:firebase-storage'
+
 
 }
 apply plugin: 'com.google.gms.google-services'
