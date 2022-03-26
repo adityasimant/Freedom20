@@ -56,20 +56,25 @@ public class homeFragment extends Fragment {
 
         dashboardRV = view.findViewById(R.id.dashboardRV);
         DashboardList = new ArrayList<>();
-        DashboardList.add(new Dashboard(R.drawable.ic_baseline_account_circle_24,"My first post",
-                "Alison Parker","Trader","30","2", "3"));
 
-        DashboardList.add(new Dashboard(R.drawable.ic_baseline_account_circle_24,"My second post",
-                "Alison Parker","Trader","30","2", "3"));
+        DashboardList.add(new Dashboard(R.drawable.ic_baseline_account_circle_24,"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident sometimes on purpose (injected humour and the like).\"","My first post",
+                "Alison Parker","Trader","30","2"));
 
-        DashboardList.add(new Dashboard(R.drawable.ic_baseline_account_circle_24,"My first post",
-                "Alison Parker","Trader","30","2", "3"));
+         DashboardList.add(new Dashboard(R.drawable.ic_baseline_account_circle_24,"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident sometimes on purpose (injected humour and the like).\"","My first post",
+                "Alison Parker","Trader","30","2"));
 
-        DashboardList.add(new Dashboard(R.drawable.ic_baseline_account_circle_24,"My first post",
-                "Alison Parker","Trader","30","2", "3"));
+         DashboardList.add(new Dashboard(R.drawable.ic_baseline_account_circle_24,"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident sometimes on purpose (injected humour and the like).\"","My first post",
+                "Alison Parker","Trader","30","2"));
 
-        DashboardList.add(new Dashboard(R.drawable.ic_baseline_account_circle_24,"My first post",
-                "Alison Parker","Trader","30","2", "3"));
+         DashboardList.add(new Dashboard(R.drawable.ic_baseline_account_circle_24,"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident sometimes on purpose (injected humour and the like).\"","My first post",
+                "Alison Parker","Trader","30","2"));
+
+         DashboardList.add(new Dashboard(R.drawable.ic_baseline_account_circle_24,"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident sometimes on purpose (injected humour and the like).\"","My first post",
+                "Alison Parker","Trader","30","2"));
+
+         DashboardList.add(new Dashboard(R.drawable.ic_baseline_account_circle_24,"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident sometimes on purpose (injected humour and the like).\"","My first post",
+                "Alison Parker","Trader","30","2"));
+
 
         DashboardAdapter dashboardAdapter = new DashboardAdapter(DashboardList,getContext());
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());

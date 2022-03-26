@@ -86,12 +86,13 @@
 
         <TextView
             android:id="@+id/post"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="70dp"
             android:background="@color/Darkgrey"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:padding="3dp"
+            android:layout_margin="5dp"
             android:maxHeight="100dp"
             android:text="This is my first post"
             android:textColor="@color/white"
@@ -99,21 +100,33 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imgVprofilepic" />
+            <TextView
+                android:id="@+id/TVtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#E4E4E4"
 
+                android:text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident sometimes on purpose (injected humour and the like)."
+                android:textSize="14dp"
+                android:padding="7dp"
+                android:layout_margin="3dp"
+
+             />
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/Darkgrey"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/idUpvote"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="5dp"
                 android:background="@color/Darkgrey"
-                android:drawableLeft="@drawable/ic_baseline_upvote"
+                android:drawableLeft="@drawable/ic_up_arrow"
                 android:drawablePadding="10dp"
                 android:padding="4dp"
                 android:text="45"
@@ -127,7 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="5dp"
                 android:background="@color/Darkgrey"
                 android:drawableLeft="@drawable/ic_baseline_comment_24"
                 android:drawablePadding="10dp"
@@ -143,8 +156,7 @@
                 android:layout_width="70dp"
                 android:layout_height="38dp"
                 android:layout_marginStart="12dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="220dp"
+                android:layout_marginTop="5dp"
                 android:backgroundTint="@color/YELLOW"
                 android:drawableLeft="@drawable/ic_baseline_arrow_right_alt_24"
                 android:paddingLeft="5dp"

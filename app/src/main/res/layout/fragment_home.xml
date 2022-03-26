@@ -8,7 +8,7 @@
     tools:context=".fragments.fragments.homeFragment" >
 
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:background="@color/black"
             android:paddingBottom="10dp">
-<!--            for commit-->
+            <!--            for commit-->
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="35dp"
@@ -54,9 +54,10 @@
                 android:id="@+id/dashboardRV"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/black"
                 android:layout_marginTop="16dp"
+                android:background="@color/black"
                 android:padding="26dp"
+                android:nestedScrollingEnabled="false"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.312"
@@ -65,5 +66,5 @@
                 app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

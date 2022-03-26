@@ -3,16 +3,30 @@ package com.example.freedom20.Models;
 public class Dashboard {
 
     int profile;
-    String post,name,bio,like,comment, share;
+    String post;
+    String name;
+    String bio;
+    String like;
+    String comment;
+    String share;
+    String text;
 
-    public Dashboard(int profile, String post, String name, String bio, String like, String comment, String share) {
+    public Dashboard(int profile,String text, String post, String name, String bio, String like, String comment) {
         this.profile = profile;
+        this.text = text;
         this.post = post;
         this.name = name;
         this.bio = bio;
         this.like = like;
         this.comment = comment;
-//        this.share = share;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 
     public int getProfile() {
