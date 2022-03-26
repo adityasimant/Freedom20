@@ -90,9 +90,9 @@ public class QnAFragment extends Fragment {
                 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
 
         bookAdapter adapter2 = new bookAdapter(getContext(),books2list);
-        books1.setAdapter(adapter2);
-        books1.setHasFixedSize(false);
-        books1.setLayoutManager(layoutManager2);
+        books2.setAdapter(adapter2);
+        books2.setHasFixedSize(false);
+        books2.setLayoutManager(layoutManager2);
 
         return view;
     }
