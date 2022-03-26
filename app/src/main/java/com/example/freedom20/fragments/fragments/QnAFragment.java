@@ -34,6 +34,7 @@ public class QnAFragment extends Fragment {
         books2 = view.findViewById(R.id.books2);
         booksList = new ArrayList<>();
         books1list = new ArrayList<>();
+        books2list = new ArrayList<>();
 
 
 
@@ -43,6 +44,13 @@ public class QnAFragment extends Fragment {
         books1list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
         books1list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
         books1list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
+
+        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
+        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
+        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
+        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
+        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
+        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
 
 
         booksList.add(new LogsModel(R.drawable.stockimg,"Stock Market","Learn with Zerodha Varsity","Investing is an important way to build wealth and save for the future.\n" +
@@ -72,6 +80,14 @@ public class QnAFragment extends Fragment {
         books1.setAdapter(adapter1);
         books1.setHasFixedSize(false);
         books1.setLayoutManager(layoutManager1);
+
+  LinearLayoutManager layoutManager2
+                = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+
+        bookAdapter adapter2 = new bookAdapter(getContext(),books2list);
+        books1.setAdapter(adapter2);
+        books1.setHasFixedSize(false);
+        books1.setLayoutManager(layoutManager2);
 
         return view;
     }
