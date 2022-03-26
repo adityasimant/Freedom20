@@ -23,6 +23,8 @@ public class QnAFragment extends Fragment {
     RecyclerView BooksRV,books1,books2;
     ArrayList<LogsModel> booksList;
     ArrayList<bookModel> books1list;
+    ArrayList<bookModel> books2list;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
