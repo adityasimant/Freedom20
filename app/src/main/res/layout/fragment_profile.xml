@@ -53,9 +53,10 @@
         android:layout_height="40dp"
         android:layout_width="30dp"
         android:layout_marginEnd="25dp"
-        android:padding="0dp"
+        android:padding="1dp"
         android:layout_marginBottom="5dp"
-        app:icon="@drawable/ic_baseline_add_box_24"
+        app:icon="@drawable/edit1"
+        android:backgroundTint="#60000000"
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent" />
 

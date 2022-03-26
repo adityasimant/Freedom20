@@ -73,6 +73,8 @@ public class QnAFragment extends Fragment {
         BooksRV.setAdapter(adapter);
 
 
+        //linear layout manager & adapter for financial books
+
         LinearLayoutManager layoutManager1
                 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
 
@@ -81,6 +83,9 @@ public class QnAFragment extends Fragment {
         books1.setHasFixedSize(false);
         books1.setLayoutManager(layoutManager1);
 
+
+
+        //linear layout manager & adapter for self help books
   LinearLayoutManager layoutManager2
                 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
 
