@@ -87,6 +87,13 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        profilepic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
 
         cover.setOnClickListener(new View.OnClickListener() {
             @Override
