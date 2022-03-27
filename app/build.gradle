@@ -59,6 +59,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:9.6.1'
     implementation 'com.google.firebase:firebase-storage'
 
-
+    //photo
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }
 apply plugin: 'com.google.gms.google-services'

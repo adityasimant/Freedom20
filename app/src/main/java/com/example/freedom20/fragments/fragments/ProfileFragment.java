@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -12,15 +13,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.freedom20.Models.User;
 import com.example.freedom20.R;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.util.concurrent.Executor;
 
@@ -32,7 +39,8 @@ public class ProfileFragment extends Fragment {
     }
 
     Button cover;
-    ImageView coverPhoto;
+    TextView username,bio;
+    ImageView coverPhoto, profilepic;
     FirebaseAuth auth;
     FirebaseStorage storage;
     FirebaseDatabase database;
@@ -54,6 +62,32 @@ public class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         cover = view.findViewById(R.id.btnEditCover);
         coverPhoto = view.findViewById(R.id.coverPhoto);
+        username = view.findViewById(R.id.username);
+        profilepic = view.findViewById(R.id.userProfilePic);
+        bio = view.findViewById(R.id.bio);
+
+        database.getReference().child("user").child(auth.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()){
+                    User user = snapshot.getValue(User.class);
+                    Picasso.get().load(user.getCoverPhoto())
+                            .placeholder(R.drawable.ic_img_placeholder)
+                            .into(coverPhoto);
+
+                    username.setText(user.getName());
+                    bio.setText(user.getUsername());
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
         cover.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -3,6 +3,20 @@ package com.example.freedom20.Models;
 public class User {
     private String username,email,name,password;
 
+    private String coverPhoto;
+
+    public User() {
+    }
+
+    public String getCoverPhoto() {
+        return coverPhoto;
+    }
+
+    public void setCoverPhoto(String coverPhoto) {
+        this.coverPhoto = coverPhoto;
+    }
+
+
     public User(String username, String email, String name, String password) {
         this.username = username;
         this.email = email;
