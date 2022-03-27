@@ -75,6 +75,10 @@ public class ProfileFragment extends Fragment {
                             .placeholder(R.drawable.ic_img_placeholder)
                             .into(coverPhoto);
 
+                    Picasso.get().load(user.getProfile())
+                            .placeholder(R.drawable.ic_img_placeholder)
+                            .into(profilepic);
+
                     username.setText(user.getName());
                     bio.setText(user.getUsername());
 
@@ -90,7 +94,10 @@ public class ProfileFragment extends Fragment {
         profilepic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                intent.setType("image/*");
+                startActivityForResult(intent,22);
             }
         });
 
@@ -111,24 +118,48 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (data.getData()!= null){
-            Uri uri = data.getData();
-            coverPhoto.setImageURI(uri);
+        if (requestCode == 11){
+            if (data.getData()!= null){
+                Uri uri = data.getData();
+                coverPhoto.setImageURI(uri);
 
-            final StorageReference reference = storage.getReference().child("cover_photo")
-                    .child(FirebaseAuth.getInstance().getUid());
-            reference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    Toast.makeText(getContext(), "Cover photo saved succesfully", Toast.LENGTH_SHORT).show();
-                    reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                        @Override
-                        public void onSuccess(Uri uri) {
-                            database.getReference().child("user").child(auth.getUid()).child("coverPhoto").setValue(uri.toString());
-                        }
-                    });
-                }
-            });
+                final StorageReference reference = storage.getReference().child("cover_photo")
+                        .child(FirebaseAuth.getInstance().getUid());
+                reference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        Toast.makeText(getContext(), "Cover photo saved succesfully", Toast.LENGTH_SHORT).show();
+                        reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                database.getReference().child("user").child(auth.getUid()).child("coverPhoto").setValue(uri.toString());
+                            }
+                        });
+                    }
+                });
+            }
+
+        }
+        else{
+            if (data.getData()!= null){
+                Uri uri = data.getData();
+                profilepic.setImageURI(uri);
+                final StorageReference reference = storage.getReference().child("profile_photo")
+                        .child(FirebaseAuth.getInstance().getUid());
+                reference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        Toast.makeText(getContext(), "photo saved succesfully", Toast.LENGTH_SHORT).show();
+                        reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                database.getReference().child("user").child(auth.getUid()).child("profile").setValue(uri.toString());
+                            }
+                        });
+                    }
+                });
+            }
+
         }
     }
 }

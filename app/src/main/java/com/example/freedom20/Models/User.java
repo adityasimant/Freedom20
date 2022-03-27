@@ -4,6 +4,19 @@ public class User {
     private String username,email,name,password;
 
     private String coverPhoto;
+    private String profile;
+
+    public String getProfile() {
+        return profile;
+    }
+
+    public void setProfile(String profile) {
+        this.profile = profile;
+    }
+
+
+
+
 
     public User() {
     }

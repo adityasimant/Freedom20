@@ -25,7 +25,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10dp"
                 android:text="Freedom 20"
-                android:textColor="@color/grey"
+                android:textColor="@color/white"
                 android:textSize="25dp"
                 android:textStyle="bold" />
 
@@ -41,13 +41,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
                 android:background="@color/Darkgrey"
                 android:padding="3dp"
                 android:text="Financial Books :"
-                android:textColor="@color/grey"
-                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:textSize="13dp"
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -66,7 +66,7 @@
                 android:padding="3dp"
                 android:text="Self-help Books :"
                 android:textColor="@color/grey"
-                android:textSize="20dp"
+                android:textSize="13dp"
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView

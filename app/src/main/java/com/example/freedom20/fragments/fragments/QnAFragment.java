@@ -36,8 +36,6 @@ public class QnAFragment extends Fragment {
         books1list = new ArrayList<>();
         books2list = new ArrayList<>();
 
-
-
         books1list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
         books1list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
         books1list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
