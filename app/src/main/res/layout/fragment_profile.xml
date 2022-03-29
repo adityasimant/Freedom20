@@ -56,7 +56,7 @@
         android:padding="1dp"
         android:layout_marginBottom="5dp"
         app:icon="@drawable/edit1"
-        android:backgroundTint="#60000000"
+        android:backgroundTint="#60FFFBFB"
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -96,7 +96,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
             <TextView
@@ -127,17 +126,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/YELLOW"
-        android:text="Edit profile"
-        android:textColor="@color/Darkgrey"
-        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
