@@ -48,6 +48,7 @@ public class bookAdapter extends RecyclerView.Adapter<BookViewHolder>{
         holder.auth.setText(model.getAuthor());
         Picasso.get().load(model.getBook()).placeholder(R.drawable.ic_img_placeholder).into(holder.bookimg);
 
+
     }
 
     @Override

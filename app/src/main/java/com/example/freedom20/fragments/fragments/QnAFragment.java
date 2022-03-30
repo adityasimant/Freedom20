@@ -49,23 +49,25 @@ public class QnAFragment extends Fragment {
 
         books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FRchDadPoorDad.png?alt=media&token=ebe69f5e-aa0f-4723-8cb6-1bff90a4c634"
                 ,"Rich Dad Poor Dad","Robert Kiyosaki","link"));
- books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FRchDadPoorDad.png?alt=media&token=ebe69f5e-aa0f-4723-8cb6-1bff90a4c634"
-                ,"Rich Dad Poor Dad","Robert Kiyosaki","link"));
- books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FRchDadPoorDad.png?alt=media&token=ebe69f5e-aa0f-4723-8cb6-1bff90a4c634"
-                ,"Rich Dad Poor Dad","Robert Kiyosaki","link"));
- books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FRchDadPoorDad.png?alt=media&token=ebe69f5e-aa0f-4723-8cb6-1bff90a4c634"
-                ,"Rich Dad Poor Dad","Robert Kiyosaki","link"));
- books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FRchDadPoorDad.png?alt=media&token=ebe69f5e-aa0f-4723-8cb6-1bff90a4c634"
-                ,"Rich Dad Poor Dad","Robert Kiyosaki","link"));
- books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FRchDadPoorDad.png?alt=media&token=ebe69f5e-aa0f-4723-8cb6-1bff90a4c634"
-                ,"Rich Dad Poor Dad","Robert Kiyosaki","link"));
 
-//        books1list.add(new bookModel(R.drawable.booksimg,"The simple path to wealth","JL collins","link"));
-//        books1list.add(new bookModel(R.drawable.booksimg,"Think and grow rich","Napoleon Hill","link"));
-//        books1list.add(new bookModel(R.drawable.booksimg,"A very long book name that wont fit in textview","and a even bigger author name","link"));
-//        books1list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
-//        books1list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
-//
+ books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Fteachyoutoberich.jfif?alt=media&token=3ddba6f6-a6f9-4391-ab42-7107322d69aa"
+                ,"I Will Teach You To Be Rich","Ramit Sethi","link"));
+
+ books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FtheInvestmentAns.jfif?alt=media&token=a7775af4-9127-4c95-ac7b-dc3c7fd944b5"
+                ,"The Investment Answer","Daniel Goldie and Gordon Murray","link"));
+
+ books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Fmillionainextdoor.jfif?alt=media&token=849ab0ed-17f9-4bf9-a41e-5dfb057365b2"
+                ,"The Millionaire Next Door","Thomas J. Stanley and William D. Danko","link"));
+
+ books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Frichhabbits.jfif?alt=media&token=2305267c-ecd0-47a5-b3da-a619e4475b02"
+                ,"Rich Habits: The Daily Success Habits Of Wealthy Individuals","Thomas Corley","link"));
+
+ books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Ffinancially%20fearless.jfif?alt=media&token=7d7b6b65-656a-45d6-8e37-eaa11e8c3654"
+                ,"Financially Fearless: The LearnVest Program For Taking Control Of Your Money","Alexa Von Tobel","link"));
+
+books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FThknGrow.png?alt=media&token=e7e3938e-5b70-4a61-b144-4f650d732248"
+                ,"Think and grow rich ","Napoleon Hill","link"));
+
 //        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
 //        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
 //        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
