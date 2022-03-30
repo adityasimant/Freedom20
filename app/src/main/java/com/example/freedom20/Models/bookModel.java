@@ -1,11 +1,12 @@
 package com.example.freedom20.Models;
 
+import com.squareup.picasso.RequestCreator;
+
 public class bookModel {
-    int book;
-    String Title,author,link;
+    String book,Title,author,link;
 
 
-    public bookModel(int book, String title, String author, String link) {
+    public bookModel(String book, String title, String author, String link) {
         this.book = book;
         this.Title = title;
         this.author = author;
@@ -22,11 +23,11 @@ public class bookModel {
 
 
 
-    public int getBook() {
+    public String getBook() {
         return book;
     }
 
-    public void setBook(int book) {
+    public void setBook(String book) {
         this.book = book;
     }
 

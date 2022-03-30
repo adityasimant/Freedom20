@@ -15,6 +15,10 @@ import com.example.freedom20.Adapter.bookAdapter;
 import com.example.freedom20.Models.LogsModel;
 import com.example.freedom20.Models.bookModel;
 import com.example.freedom20.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -25,10 +29,17 @@ public class QnAFragment extends Fragment {
     ArrayList<bookModel> books1list;
     ArrayList<bookModel> books2list;
 
+    FirebaseDatabase database;
+    DatabaseReference reference;
+    FirebaseStorage storage;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_qn_a, container, false);
+
+        storage = FirebaseStorage.getInstance();
+        database = FirebaseDatabase.getInstance();
 
         books1 = view.findViewById(R.id.books1);
         books2 = view.findViewById(R.id.books2);
@@ -36,19 +47,31 @@ public class QnAFragment extends Fragment {
         books1list = new ArrayList<>();
         books2list = new ArrayList<>();
 
-        books1list.add(new bookModel(R.drawable.booksimg,"Rich Dad Poor Dad","Robert Kiyosaki","link"));
-        books1list.add(new bookModel(R.drawable.booksimg,"The simple path to wealth","JL collins","link"));
-        books1list.add(new bookModel(R.drawable.booksimg,"Think and grow rich","Napoleon Hill","link"));
-        books1list.add(new bookModel(R.drawable.booksimg,"A very long book name that wont fit in textview","and a even bigger author name","link"));
-        books1list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
-        books1list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
+        books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FRchDadPoorDad.png?alt=media&token=ebe69f5e-aa0f-4723-8cb6-1bff90a4c634"
+                ,"Rich Dad Poor Dad","Robert Kiyosaki","link"));
+ books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FRchDadPoorDad.png?alt=media&token=ebe69f5e-aa0f-4723-8cb6-1bff90a4c634"
+                ,"Rich Dad Poor Dad","Robert Kiyosaki","link"));
+ books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FRchDadPoorDad.png?alt=media&token=ebe69f5e-aa0f-4723-8cb6-1bff90a4c634"
+                ,"Rich Dad Poor Dad","Robert Kiyosaki","link"));
+ books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FRchDadPoorDad.png?alt=media&token=ebe69f5e-aa0f-4723-8cb6-1bff90a4c634"
+                ,"Rich Dad Poor Dad","Robert Kiyosaki","link"));
+ books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FRchDadPoorDad.png?alt=media&token=ebe69f5e-aa0f-4723-8cb6-1bff90a4c634"
+                ,"Rich Dad Poor Dad","Robert Kiyosaki","link"));
+ books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FRchDadPoorDad.png?alt=media&token=ebe69f5e-aa0f-4723-8cb6-1bff90a4c634"
+                ,"Rich Dad Poor Dad","Robert Kiyosaki","link"));
 
-        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
-        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
-        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
-        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
-        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
-        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
+//        books1list.add(new bookModel(R.drawable.booksimg,"The simple path to wealth","JL collins","link"));
+//        books1list.add(new bookModel(R.drawable.booksimg,"Think and grow rich","Napoleon Hill","link"));
+//        books1list.add(new bookModel(R.drawable.booksimg,"A very long book name that wont fit in textview","and a even bigger author name","link"));
+//        books1list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
+//        books1list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
+//
+//        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
+//        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
+//        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
+//        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
+//        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
+//        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
 
 
         booksList.add(new LogsModel(R.drawable.stockimg,"Stock Market","Learn with Zerodha Varsity","Investing is an important way to build wealth and save for the future.\n" +

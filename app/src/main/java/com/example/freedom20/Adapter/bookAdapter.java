@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.freedom20.Models.bookModel;
 import com.example.freedom20.R;
 import com.example.freedom20.fragments.fragments.QnAFragment;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -45,8 +46,7 @@ public class bookAdapter extends RecyclerView.Adapter<BookViewHolder>{
 
         holder.titlebook.setText(model.getTitle());
         holder.auth.setText(model.getAuthor());
-        holder.bookimg.setImageDrawable(context1.getResources().getDrawable(model.getBook()));
-
+        Picasso.get().load(model.getBook()).placeholder(R.drawable.ic_img_placeholder).into(holder.bookimg);
 
     }
 
