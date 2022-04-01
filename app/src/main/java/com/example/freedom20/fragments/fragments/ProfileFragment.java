@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.freedom20.DiscoverFragment;
 import com.example.freedom20.Models.User;
 import com.example.freedom20.R;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -40,7 +41,7 @@ public class ProfileFragment extends Fragment {
 
     Button cover;
     TextView username,bio;
-    ImageView coverPhoto, profilepic;
+    ImageView coverPhoto, profilepic, discover;
     FirebaseAuth auth;
     FirebaseStorage storage;
     FirebaseDatabase database;
@@ -65,6 +66,7 @@ public class ProfileFragment extends Fragment {
         username = view.findViewById(R.id.username);
         profilepic = view.findViewById(R.id.userProfilePic);
         bio = view.findViewById(R.id.bio);
+        discover = view.findViewById(R.id.discoverPeople);
 
         database.getReference().child("user").child(auth.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -90,6 +92,17 @@ public class ProfileFragment extends Fragment {
 
             }
         });
+        discover.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(getContext(),DiscoverFragment.class));
+
+            }
+        });
+
+
+
 
         profilepic.setOnClickListener(new View.OnClickListener() {
             @Override

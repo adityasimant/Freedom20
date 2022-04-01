@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.freedom20.Models.bookModel;
 import com.example.freedom20.R;
+import com.example.freedom20.WebActivity;
 import com.example.freedom20.fragments.fragments.QnAFragment;
 import com.squareup.picasso.Picasso;
 
@@ -76,8 +77,10 @@ class BookViewHolder extends RecyclerView.ViewHolder implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(v.getContext(), QnAFragment.class);
-//        intent.putExtra("link","https://google.com");
+        Intent intent = new Intent(v.getContext(), WebActivity.class);
+//        intent.putExtra("url","https://google.com");
+        intent.putExtra("url","http://www.lequydonhanoi.edu.vn/upload_images/S%C3%A1ch%20ngo%E1%BA%A1i%20ng%E1%BB%AF/Rich%20Dad%20Poor%20Dad.pdf");
         v.getContext().startActivity(intent);
+
     }
 }
