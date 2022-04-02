@@ -3,101 +3,79 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/Darkgrey"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/Darkgrey">
+
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="7dp"
+        android:id="@+id/view2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="7dp"
+        android:elevation="12dp"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9"
+        app:cardCornerRadius="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/Darkgrey"
-            android:orientation="horizontal"
-            android:padding="7dp">
+        <ImageView
+            android:id="@+id/userProfilePic"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
 
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_baseline_account_circle_24" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/view2"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="7dp"
-                android:elevation="12dp"
-                android:innerRadius="0dp"
-                android:shape="ring"
-                android:thicknessRatio="1.9"
-                app:cardCornerRadius="40dp">
-
-                <ImageView
-                    android:id="@+id/userProfilePic"
-                    android:layout_width="80dp"
-                    android:layout_height="match_parent"
-
-                    android:layout_centerHorizontal="true"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/ic_baseline_account_circle_24" />
-
-            </androidx.cardview.widget.CardView>
-
-            <LinearLayout
-                android:layout_width="240dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/username"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@color/Darkgrey"
-                    android:padding="5dp"
-                    android:text="Alison Parker"
-                    android:textColor="@color/grey"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/bio"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@color/Darkgrey"
-                    android:padding="5dp"
-                    android:text="TextView"
-                    android:textColor="@color/grey"
-                    android:textSize="16dp" />
-            </LinearLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <Button
-                    android:id="@+id/btnfollow"
-                    android:layout_width="54dp"
-                    android:layout_height="79dp"
-                    android:layout_gravity="center_vertical"
-                    android:backgroundTint="@color/YELLOW"
-                    app:icon="@drawable/follow"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/username1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@color/Darkgrey"
+        android:padding="5dp"
+        android:text="Alison Parker"
+        android:textColor="@color/grey"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/bio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/Darkgrey"
+        android:padding="5dp"
+        android:text="TextView"
+        android:textColor="@color/grey"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/username1"
+        app:layout_constraintStart_toStartOf="@+id/username1"
+        app:layout_constraintTop_toBottomOf="@+id/username1" />
+
+
+    <Button
+        android:id="@+id/btnfollow"
+        android:layout_width="54dp"
+        android:layout_height="79dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/YELLOW"
+        app:icon="@drawable/follow"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

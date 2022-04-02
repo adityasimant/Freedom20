@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.freedom20.Adapter.userAdapter;
 import com.example.freedom20.Models.User;
@@ -28,7 +29,6 @@ public class DiscoverFragment extends Fragment {
     FirebaseAuth auth;
     FirebaseDatabase database;
     RecyclerView RV;
-    userAdapter adapter = new userAdapter(getContext(),list);
 
     public DiscoverFragment() {
         // Required empty public constructor
@@ -42,6 +42,7 @@ public class DiscoverFragment extends Fragment {
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
 
+
     }
 
     @Override
@@ -50,6 +51,7 @@ public class DiscoverFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_discover, container, false);
 
         RV = view.findViewById(R.id.RVfollow);
+        userAdapter adapter = new userAdapter(getContext(),list);
 
         database.getReference().child("user").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -60,16 +62,18 @@ public class DiscoverFragment extends Fragment {
                     list.add(user);
                 }
                 adapter.notifyDataSetChanged();
+                Toast.makeText(view.getContext(), "Succesful", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Toast.makeText(view.getContext(), "An Error occured", Toast.LENGTH_SHORT).show();
             }
         });
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(view.getContext());
         RV.setLayoutManager(layoutManager);
+        RV.setHasFixedSize(false);
         RV.setAdapter(adapter);
 
 

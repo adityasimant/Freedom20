@@ -38,15 +38,14 @@ public class userAdapter extends RecyclerView.Adapter<userAdapter.viewHolder>{
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         User user = list.get(position);
 
-        Picasso.get()
-                .load(user.getProfile()).placeholder(R.drawable.ic_img_placeholder).into(holder.ProfilePic);
+        Picasso.get().load(user.getProfile()).placeholder(R.drawable.ic_img_placeholder).into(holder.ProfilePic);
         holder.username.setText(user.getName());
         holder.bio.setText(user.getUsername());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return list.size();
     }
 
     public class viewHolder extends RecyclerView.ViewHolder {
@@ -56,9 +55,9 @@ public class userAdapter extends RecyclerView.Adapter<userAdapter.viewHolder>{
         public viewHolder(@NonNull View itemView) {
             super(itemView);
 
-            username = itemView.findViewById(R.id.username);
+            username = itemView.findViewById(R.id.username1);
             follow = itemView.findViewById(R.id.btnfollow);
-            bio = itemView.findViewById(R.id.bio);
+            bio = itemView.findViewById(R.id.bio1);
             ProfilePic = itemView.findViewById(R.id.userProfilePic);
 
         }
