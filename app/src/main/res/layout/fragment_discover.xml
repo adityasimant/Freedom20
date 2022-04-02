@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".DiscoverFragment"
     android:orientation="vertical"
-    android:background="@color/Darkgrey"
+    android:background="@color/black"
     >
     <TextView
         android:layout_width="match_parent"
