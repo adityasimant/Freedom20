@@ -6,6 +6,10 @@ public class User {
     private String coverPhoto;
     private String profile;
 
+
+
+    private String userID;
+
     public String getProfile() {
         return profile;
     }
@@ -67,5 +71,12 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 }

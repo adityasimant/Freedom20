@@ -5,11 +5,25 @@
     android:layout_height="match_parent"
     tools:context=".DiscoverFragment"
     android:orientation="vertical"
+    android:background="@color/Darkgrey"
     >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Discover"
+        android:textStyle="bold"
+        android:padding="3dp"
+        android:background="@color/Darkgrey"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:layout_margin="5dp"
+        />
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RVfollow"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/Darkgrey"
+        android:layout_marginTop="5dp"
         />
 
 

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,7 +37,7 @@ public class ProfileFragment extends Fragment {
 
 
     public ProfileFragment() {
-        // Required empty public constructor
+
     }
 
     Button cover;
@@ -53,6 +54,7 @@ public class ProfileFragment extends Fragment {
         auth = FirebaseAuth.getInstance();
         storage = FirebaseStorage.getInstance();
         database = FirebaseDatabase.getInstance();
+
     }
 
 
@@ -94,9 +96,14 @@ public class ProfileFragment extends Fragment {
         });
         discover.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View view) {
 
-                startActivity(new Intent(getContext(),DiscoverFragment.class));
+//                Intent myintent = new Intent(view.getContext(),DiscoverFragment.class);
+//                startActivity(myintent);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.container,new DiscoverFragment());
+                transaction.commit();
 
             }
         });

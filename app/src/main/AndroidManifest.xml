@@ -15,6 +15,7 @@
         <activity
             android:name=".SignupActivity"
             android:exported="false" />
+
         <activity
             android:name=".WebActivity"
             android:exported="false" >
