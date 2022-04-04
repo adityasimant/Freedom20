@@ -13,15 +13,14 @@
         android:theme="@style/Theme.Freedom20"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".PDFActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignupActivity"
             android:exported="false" />
-
         <activity
             android:name=".WebActivity"
-            android:exported="false" >
-
-
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".loginActivity"
             android:exported="true">
@@ -33,9 +32,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

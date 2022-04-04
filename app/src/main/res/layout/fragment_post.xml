@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -38,6 +39,40 @@
         android:gravity="start"
         android:hint="share something..."
         android:inputType="textPersonName" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:src="@drawable/ic_img_placeholder" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:src="@drawable/ic_baseline_camera_alt_24" />
+
+        <ImageView
+            android:id="@+id/attachFile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:src="@drawable/ic_baseline_attach_file_24" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

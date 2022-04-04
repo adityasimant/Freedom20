@@ -48,7 +48,8 @@ public class QnAFragment extends Fragment {
         books2list = new ArrayList<>();
 
         books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FRchDadPoorDad.png?alt=media&token=ebe69f5e-aa0f-4723-8cb6-1bff90a4c634"
-                ,"Rich Dad Poor Dad","Robert Kiyosaki","link"));
+                ,"Rich Dad Poor Dad","Robert Kiyosaki",
+                "https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/BookPDF%2FRich-Dad-Poor-Dad-eBook.pdf?alt=media&token=3fa75092-3eb5-45be-a07a-2783595a5ac7"));
 
  books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Fteachyoutoberich.jfif?alt=media&token=3ddba6f6-a6f9-4391-ab42-7107322d69aa"
                 ,"I Will Teach You To Be Rich","Ramit Sethi","link"));
@@ -68,14 +69,30 @@ public class QnAFragment extends Fragment {
 books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FThknGrow.png?alt=media&token=e7e3938e-5b70-4a61-b144-4f650d732248"
                 ,"Think and grow rich ","Napoleon Hill","link"));
 
-//        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
-//        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
-//        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
-//        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
-//        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
-//        books2list.add(new bookModel(R.drawable.booksimg,"another book","adi","link"));
+        //self help books
+        books2list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Fcalender%20of%20wisdon.webp?alt=media&token=d4e63f55-01e2-4bdc-b6a2-3c9f659905c3",
+                "A Calendar of Wisdom","Leo Tolstoj",
+                "link"));
+        books2list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Fatomic%20habbits.webp?alt=media&token=3808c1fb-7feb-48c5-ae4d-e483fc376e0f",
+                "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones","James Clea",
+                 "link"));
+        books2list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Falchemist.webp?alt=media&token=ef5b2c88-b5c4-4551-8701-2701b0833705",
+                "The Alchemist"," Paulo Coelho",
+                "link"));
+        books2list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Fwarnpeace.webp?alt=media&token=d9f01f86-cf2c-492e-a7fe-23f4b0835c16",
+                "War and Peace","Leo Tolstoy",
+                "link"));
+        books2list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Fmansearchformeaning.webp?alt=media&token=cf8e0268-ebcd-4ad5-bac6-7a8b0e2c6c10",
+                "Man's Search for Meaning","Viktor Frankl",
+                "link"));
+        books2list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Fegoisenemy.webp?alt=media&token=cd561273-717f-4209-ac12-bb0582cb42f9",
+                "Ego Is the Enemy","Ryan Holiday",
+                "link"));
+        books2list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Ffooledbyrandomness.webp?alt=media&token=d62d06d6-a969-43aa-9f8b-2aa501628555",
+                "Fooled by Randomness","Nassim Nicholas Taleb",
+                "link"));
 
-
+        // courses
         booksList.add(new LogsModel(R.drawable.stockimg,"Stock Market","Learn with Zerodha Varsity","Investing is an important way to build wealth and save for the future.\n" +
                 "Here’s what we should have learned about the stock market."));
 

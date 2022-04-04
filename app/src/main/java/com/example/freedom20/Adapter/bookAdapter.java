@@ -14,6 +14,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.freedom20.Models.bookModel;
+import com.example.freedom20.PDFActivity;
 import com.example.freedom20.R;
 import com.example.freedom20.WebActivity;
 import com.example.freedom20.fragments.fragments.QnAFragment;
@@ -48,8 +49,14 @@ public class bookAdapter extends RecyclerView.Adapter<BookViewHolder>{
         holder.titlebook.setText(model.getTitle());
         holder.auth.setText(model.getAuthor());
         Picasso.get().load(model.getBook()).placeholder(R.drawable.ic_img_placeholder).into(holder.bookimg);
-
-
+       holder.bookcard.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Intent intent = new Intent(view.getContext(), PDFActivity.class);
+               intent.putExtra("url",model.getLink());
+               view.getContext().startActivity(intent);
+           }
+       });
     }
 
     @Override
@@ -58,13 +65,12 @@ public class bookAdapter extends RecyclerView.Adapter<BookViewHolder>{
     }
 }
 
-class BookViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+class BookViewHolder extends RecyclerView.ViewHolder  {
 
     CardView bookcard;
     TextView titlebook;
     TextView auth;
     ImageView bookimg;
-
     public BookViewHolder(@NonNull View itemView) {
         super(itemView);
 
@@ -72,15 +78,7 @@ class BookViewHolder extends RecyclerView.ViewHolder implements View.OnClickList
         titlebook = itemView.findViewById(R.id.idbooktitle);
         auth = itemView.findViewById(R.id.author);
         bookimg = itemView.findViewById(R.id.bookimg);
-        bookcard.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View v) {
-        Intent intent = new Intent(v.getContext(), WebActivity.class);
-//        intent.putExtra("url","https://google.com");
-        intent.putExtra("url","http://www.lequydonhanoi.edu.vn/upload_images/S%C3%A1ch%20ngo%E1%BA%A1i%20ng%E1%BB%AF/Rich%20Dad%20Poor%20Dad.pdf");
-        v.getContext().startActivity(intent);
 
-    }
 }
