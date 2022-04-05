@@ -18,7 +18,6 @@ public class WebActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web);
-        back = findViewById(R.id.back);
         Intent intent = getIntent();
         String url = intent.getStringExtra("url");
 
@@ -27,12 +26,6 @@ public class WebActivity extends AppCompatActivity {
         webView.loadUrl(url);
         webView.setWebViewClient(new WebViewController());
 
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(WebActivity.this, QnAFragment.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }
