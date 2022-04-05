@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">Freedom20</string>
-    <string name="home">HOME</string>
+    <string name="home">Home</string>
     <string name="explore">EXPLORE</string>
-    <string name="post">POST</string>
-    <string name="logs">LOGS</string>
-    <string name="profile">PROFILE</string>
+    <string name="post">Post</string>
+    <string name="news">News</string>
+    <string name="logs">Docs</string>
+    <string name="profile">Profile</string>
     <string name="title_activity_web">WebActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

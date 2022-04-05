@@ -6,7 +6,7 @@
         android:icon="@drawable/ic_home_one"
         />
     <item
-        android:title="@string/explore"
+        android:title="@string/news"
         android:id="@+id/btnexplore"
         android:icon="@drawable/ic_baseline_explore_24"
         />

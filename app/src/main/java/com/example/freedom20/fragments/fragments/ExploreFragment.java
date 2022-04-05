@@ -8,59 +8,70 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.freedom20.Adapter.NewsAdapter;
+import com.example.freedom20.ApiUtilities;
+import com.example.freedom20.Models.MainNews;
+import com.example.freedom20.Models.NewsModel;
 import com.example.freedom20.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ExploreFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+
 public class ExploreFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    String API_KEY = "6145e685abf94175bbaaf2161c6ba8ad";
+    ArrayList<NewsModel> modelArrayList;
+    String country = "in";
+    private RecyclerView recyclerViewFinance;
+    NewsAdapter adapter;
+    private String category = "business";
 
     public ExploreFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ExploreFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ExploreFragment newInstance(String param1, String param2) {
-        ExploreFragment fragment = new ExploreFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_explore, container, false);
+        View view = inflater.inflate(R.layout.fragment_explore, container, false);
+        recyclerViewFinance = view.findViewById(R.id.RVfinanceNews);
+        modelArrayList = new ArrayList<>();
+        recyclerViewFinance.setLayoutManager(new LinearLayoutManager(getContext()));
+        adapter = new NewsAdapter(getContext(),modelArrayList);
+        recyclerViewFinance.setAdapter(adapter);
+        findNews();
+
+        return view;
+    }
+
+    private void findNews() {
+        ApiUtilities.getApiInterface().getFinanceNews(country,category,100,API_KEY).enqueue(new Callback<MainNews>() {
+            @Override
+            public void onResponse(Call<MainNews> call, Response<MainNews> response) {
+                modelArrayList.addAll(response.body().getArticles());
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onFailure(Call<MainNews> call, Throwable t) {
+
+            }
+        });
+
     }
 }
