@@ -1,6 +1,7 @@
 package com.example.freedom20.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.freedom20.Models.NewsModel;
 import com.example.freedom20.R;
+import com.example.freedom20.WebActivity;
 
 import java.util.ArrayList;
 
@@ -46,6 +48,14 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         holder.heading.setText(list.get(position).getTitle());
         holder.content.setText(list.get(position).getDescription());
         Glide.with(context).load(list.get(position).getUrlToImage()).into(holder.imageView);
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, WebActivity.class);
+                intent.putExtra("url",list.get(position).getUrl());
+                context.startActivity(intent);
+            }
+        });
 
     }
 
