@@ -75,17 +75,42 @@ public class LogsAdapter extends RecyclerView.Adapter<LogsAdapter.viewHolder> {
             switch (position){
 
                 case 0 :
-                    intent.putExtra("url","https://zerodha.com/varsity/");
+                    intent.putExtra("url","https://zerodha.com/varsity/module/introduction-to-stock-markets/");
                     context.startActivity(intent);
                     break;
                     case 1:
-                    intent.putExtra("url","https://online.stanford.edu/courses/soe-ycs0009-divide-and-conquer-sorting-and-searching-and-randomized-algorithms");
+                    intent.putExtra("url","https://zerodha.com/varsity/module/technical-analysis/");
                     context.startActivity(intent);
                     break;
                     case 2 :
-                    intent.putExtra("url","https://scrimba.com/learn/learnreact");
+                    intent.putExtra("url","https://zerodha.com/varsity/module/fundamental-analysis/");
                     context.startActivity(intent);
                     break;
+                     case 3:
+                    intent.putExtra("url","https://zerodha.com/varsity/module/futures-trading/");
+                    context.startActivity(intent);
+                    break;
+                     case 4:
+                    intent.putExtra("url","https://zerodha.com/varsity/module/option-theory/");
+                    context.startActivity(intent);
+                    break;
+                     case 5 :
+                    intent.putExtra("url","https://zerodha.com/varsity/module/option-strategies/");
+                    context.startActivity(intent);
+                    break;
+                     case 6 :
+                    intent.putExtra("url","https://zerodha.com/varsity/module/markets-and-taxation/");
+                    context.startActivity(intent);
+                    break;
+                     case 7 :
+                    intent.putExtra("url","https://zerodha.com/varsity/module/commodities-currency-government-securities/");
+                    context.startActivity(intent);
+                    break;
+                     case 8 :
+                    intent.putExtra("url","https://zerodha.com/varsity/module/risk-management/");
+                    context.startActivity(intent);
+                    break;
+
                 default:
                     break;
 
