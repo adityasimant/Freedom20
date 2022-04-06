@@ -3,22 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/Darkgrey"
+    android:layout_height="250dp"
+    android:layout_margin="5dp"
+    android:backgroundTint="@color/Darkgrey"
     >
 
     <androidx.cardview.widget.CardView
         android:id="@+id/stockCard"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/Darkgrey"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/Darkgrey"
 
         >
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/Darkgrey"
             android:orientation="horizontal">
 
@@ -79,8 +80,8 @@
 
                 <TextView
                     android:id="@+id/aboutCard1"
-                    android:layout_width="157dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="132dp"
+                    android:layout_height="151dp"
                     android:layout_marginStart="5dp"
 
                     android:layout_marginTop="10dp"
@@ -98,30 +99,25 @@
                     android:gravity="bottom"
                     android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/btninfocard"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/YELLOW"
-                        app:icon="@android:drawable/ic_dialog_info"
-                        app:iconPadding="18dp"
-                        app:iconSize="20dp" />
-
-                    <Button
-                        android:id="@+id/btnclickcard"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/YELLOW"
-                        app:icon="@drawable/ic_baseline_arrow_right_alt_24"
-                        app:iconSize="25dp" />
 
                 </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnclickcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:backgroundTint="@color/YELLOW"
+                    android:text="View" />
             </LinearLayout>
 
         </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:background="@color/white" />
 
     </androidx.cardview.widget.CardView>
 

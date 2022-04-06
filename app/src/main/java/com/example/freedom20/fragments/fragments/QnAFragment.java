@@ -93,14 +93,44 @@ books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedo
                 "link"));
 
         // courses
-        booksList.add(new LogsModel(R.drawable.stockimg,"Stock Market","Learn with Zerodha Varsity","Investing is an important way to build wealth and save for the future.\n" +
-                "Here’s what we should have learned about the stock market."));
+        booksList.add(new LogsModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/DocsImages%2FZ1.png?alt=media&token=77c96780-0d39-4b27-b8b4-d0c9de85012f",
+                " Introduction to Stock Markets","Learn with Zerodha Varsity",
+                "Investing ensures financial security, and the Stock market plays a pivotal role in this domain" +
+                        ", it is a place where people buy/sell shares of publicly listed companies."));
 
-        booksList.add(new LogsModel(R.drawable.algorithm,"Algorithms","Learn With Standford online","Divide and Conquer,\n" +
-                "Sorting and Searching, and Randomized Algorithms"));
 
-        booksList.add(new LogsModel(R.drawable.react,"ReactJS","Learn With Scrimba","The ultimate React 101 - the perfect starting\n" +
-                "point for any React beginner"));
+ booksList.add(new LogsModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/DocsImages%2FZ2.png?alt=media&token=caf6303f-e542-4d94-8e4c-a6cbd9352ddc",
+                "Technical Analysis","Learn with Zerodha Varsity",
+                "Technical Analysis (TA) plays an important role in developing a point of view. " +
+                        "Like every other research, TA also has its own attributes"));
+
+ booksList.add(new LogsModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/DocsImages%2FZ3.png?alt=media&token=96e6ba92-ac63-4344-b801-fd5ab5b03596",
+                "Fundamental Analysis","Learn with Zerodha Varsity",
+                "Fundamental Analysis (FA) is a holistic approach to study a business."));
+
+ booksList.add(new LogsModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/DocsImages%2FZ4.png?alt=media&token=04583bac-6f64-4662-aa7e-d7b2b7a85007",
+                " Futures Trading","Learn with Zerodha Varsity",
+                "Futures Trading involves trading in contracts in the derivatives markets"));
+
+ booksList.add(new LogsModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/DocsImages%2FZ5.png?alt=media&token=0a1a7aac-c7d0-475b-8653-e825d04f7cd2",
+                "Options Theory for Professional Trading","Learn with Zerodha Varsity",
+                "An option is a contract where the price of the options is based on an underlying. Options contracts grant the buyer the right to buy the underlying without a compulsory obligation."));
+
+ booksList.add(new LogsModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/DocsImages%2FZ6.png?alt=media&token=d5b9d198-7df5-4efb-8d5e-d961b897e6c5",
+                "Option Strategies","Learn with Zerodha Varsity",
+                "The module covers various options strategies that can be built with a multi-dimensional approach based on Market trend involving Option Greeks, Risk-Return, etc."));
+
+ booksList.add(new LogsModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/DocsImages%2FZ7.png?alt=media&token=3c163fc9-ae52-4259-93e7-fa72d3b8d1a9",
+                " Markets and Taxation","Learn with Zerodha Varsity",
+                "As a trader in India, you should be informed of all the taxes that are levied on your investments and account. This module overlays the taxation countenance of Investing/Trading in the Markets."));
+
+booksList.add(new LogsModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/DocsImages%2FZ8.png?alt=media&token=5b88a9a3-2c41-46b6-8443-a3ffd05c64d7",
+                "Currency, Commodity, and Government Securities","Learn with Zerodha Varsity",
+                "This module covers the Currency,  MCX Commodity contract, and the Government Securities (GSec) traded in the Indian Markets."));
+
+booksList.add(new LogsModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/DocsImages%2FZ9.png?alt=media&token=e08992cb-7530-41e1-8dcf-6c4cf483aaa0",
+                "Risk Management & Trading Psychology","Learn with Zerodha Varsity",
+                "The module covers the risk management aspect along with the psychology required for being consistent and profitable while trading"));
 
 
 

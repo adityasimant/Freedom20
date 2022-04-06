@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.freedom20.Models.LogsModel;
 import com.example.freedom20.R;
 import com.example.freedom20.WebActivity;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -38,7 +39,7 @@ public class LogsAdapter extends RecyclerView.Adapter<LogsAdapter.viewHolder> {
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         LogsModel model = list.get(position);
-        holder.image.setImageResource(model.getImg());
+        Picasso.get().load(model.getImg()).placeholder(R.drawable.ic_img_placeholder).into(holder.image);
         holder.header.setText(model.getHeader());
         holder.webabt.setText(model.getWebsiteabt());
         holder.info.setText(model.getInfo());

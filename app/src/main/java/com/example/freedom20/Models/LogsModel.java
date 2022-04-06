@@ -2,10 +2,10 @@ package com.example.freedom20.Models;
 
 public class LogsModel {
 
-    int img;
-    String header,websiteabt,info;
 
-    public LogsModel(int img, String header, String websiteabt, String info) {
+    String header,websiteabt,info,img;
+
+    public LogsModel(String img, String header, String websiteabt, String info) {
         this.img = img;
         this.header = header;
         this.websiteabt = websiteabt;
@@ -13,11 +13,11 @@ public class LogsModel {
 
     }
 
-    public int getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(int img) {
+    public void setImg(String img) {
         this.img = img;
     }
 

@@ -62,7 +62,7 @@
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
                 android:id="@+id/newsImgView"
-                android:src="@drawable/ic_launcher_background"/>
+                android:src="@drawable/algorithm"/>
         </LinearLayout>
 
         <TextView
