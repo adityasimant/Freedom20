@@ -9,10 +9,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.SurfaceControl;
-import android.widget.Toast;
-
-import com.example.freedom20.databinding.ActivityMainBinding;
 import com.example.freedom20.fragments.fragments.ExploreFragment;
 import com.example.freedom20.fragments.fragments.PostFragment;
 import com.example.freedom20.fragments.fragments.ProfileFragment;
@@ -20,11 +16,22 @@ import com.example.freedom20.fragments.fragments.QnAFragment;
 import com.example.freedom20.fragments.fragments.homeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     ActionBarDrawerToggle actionBarDrawerToggle;
     DrawerLayout drawerLayout;
+
+    FirebaseDatabase database;
+    FirebaseAuth auth;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
         setContentView(R.layout.drawerlayout);
         bottomNavigationView=findViewById(R.id.readableBottomBar);
+
+        database = FirebaseDatabase.getInstance();
+        auth = FirebaseAuth.getInstance();
 
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

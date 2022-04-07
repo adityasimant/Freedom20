@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.freedom20.DiscoverFragment;
+import com.example.freedom20.Models.NavModel;
 import com.example.freedom20.Models.User;
 import com.example.freedom20.R;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -75,6 +76,7 @@ public class ProfileFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()){
                     User user = snapshot.getValue(User.class);
+                    NavModel model = new NavModel();
                     Picasso.get().load(user.getCoverPhoto())
                             .placeholder(R.drawable.ic_img_placeholder)
                             .into(coverPhoto);
@@ -85,6 +87,9 @@ public class ProfileFragment extends Fragment {
 
                     username.setText(user.getName());
                     bio.setText(user.getUsername());
+                    model.setName(user.getName());
+                    model.setEmail(user.getEmail());
+                    model.setProfileUrl(user.getProfile());
 
                 }
             }
