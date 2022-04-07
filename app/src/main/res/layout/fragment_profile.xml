@@ -42,28 +42,21 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+
+    <ImageView
+        android:id="@+id/coverPhoto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="2dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginEnd="1dp"
-        android:backgroundTint="@color/Darkgrey"
-        app:cardCornerRadius="35dp"
+        android:layout_height="150dp"
+        android:layout_margin="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/algorithm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/coverPhoto"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_margin="5dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/algorithm" />
-    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/btnEditCover"
@@ -74,7 +67,7 @@
         android:layout_marginBottom="5dp"
         app:icon="@drawable/edit1"
         android:backgroundTint="#60FFFBFB"
-        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintBottom_toBottomOf="@+id/coverPhoto"
         app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

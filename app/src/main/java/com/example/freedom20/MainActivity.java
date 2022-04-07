@@ -1,7 +1,10 @@
 package com.example.freedom20;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
@@ -16,8 +19,12 @@ import com.example.freedom20.fragments.fragments.ProfileFragment;
 import com.example.freedom20.fragments.fragments.QnAFragment;
 import com.example.freedom20.fragments.fragments.homeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
+    NavigationView navigationView;
+    ActionBarDrawerToggle actionBarDrawerToggle;
+    DrawerLayout drawerLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.container,new homeFragment());
         transaction.commit();
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.drawerlayout);
         bottomNavigationView=findViewById(R.id.readableBottomBar);
 
 
@@ -59,6 +66,43 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        navigationView = findViewById(R.id.navigation_view);
+        navigationView.setItemIconTintList(null);
+        drawerLayout = findViewById(R.id.drawer);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open,
+                R.string.close);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+          public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                  switch (item.getItemId()) {
+
+                   case R.id.facebookPage:
+                     break;
+                     case R.id.website:
+                         break;
+                         case R.id.nav_privacy_policy:
+                             break;
+                             case R.id.nav_terms_conditions:
+                                 break;
+                                 case R.id.more:
+                                     break;
+
+                                     case R.id.nav_rate:
+                                         break;
+
+                                         case R.id.nav_share:
+                                             break;
+
+                  }
+                  return true;
+            }
+        });
+
 
     }
 }

@@ -19,4 +19,16 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- TODO: Remove or change this placeholder text -->
+<!--    navigatin drawer-->
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="email">adityasimant@gmail.com</string>
+    <string name="facebook_page">Follow on Facebook</string>
+    <string name="communication">Communication</string>
+    <string name="nav_rate">Rate or Feedback</string>
+    <string name="nav_share">Share</string>
+    <string name="nav_privacy_policy">Privacy Policy</string>
+    <string name="nav_terms_conditions">Terms and Conditions</string>
+    <string name="website">Visit Website</string>
+    <string name="more">More</string>
 </resources>

@@ -3,8 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.fragments.ExploreFragment"
     android:orientation="vertical">
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="News"
+       android:background="@color/black"
+       android:textColor="@color/white"
+       android:textSize="20sp"
+       android:padding="7dp"
+       android:textStyle="bold"
+       android:textAlignment="center"
+       />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RVfinanceNews"
