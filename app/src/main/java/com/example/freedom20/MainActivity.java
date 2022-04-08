@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 import com.example.freedom20.fragments.fragments.ExploreFragment;
+import com.example.freedom20.fragments.fragments.FeedbackFragment;
 import com.example.freedom20.fragments.fragments.PostFragment;
 import com.example.freedom20.fragments.fragments.ProfileFragment;
 import com.example.freedom20.fragments.fragments.QnAFragment;
@@ -89,26 +90,34 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
           public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                FragmentTransaction transaction1 = getSupportFragmentManager().beginTransaction();
                   switch (item.getItemId()) {
 
                    case R.id.facebookPage:
-                     break;
-                     case R.id.website:
-                         break;
-                         case R.id.nav_privacy_policy:
-                             break;
-                             case R.id.nav_terms_conditions:
-                                 break;
-                                 case R.id.more:
-                                     break;
+                       break;
 
-                                     case R.id.nav_rate:
-                                         break;
+                   case R.id.website:
+                       break;
 
-                                         case R.id.nav_share:
-                                             break;
+                   case R.id.nav_privacy_policy:
+                       break;
+
+                   case R.id.nav_terms_conditions:
+
+                       break;
+
+                   case R.id.more:
+                       break;
+
+                   case R.id.nav_rate:
+                       transaction1.replace(R.id.container,new FeedbackFragment());
+                       break;
+
+                   case R.id.nav_share:
+                       break;
 
                   }
+                  transaction1.commit();
                   return true;
             }
         });

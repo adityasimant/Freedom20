@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Darkgrey"
+    tools:context=".fragments.fragments.FeedbackFragment">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="We value your feedback."
+    android:textSize="25sp"
+    android:textAlignment="center"
+    android:textStyle="bold"
+    android:layout_marginTop="100dp"
+    android:layout_marginEnd="30dp"
+    android:layout_marginStart="30dp"
+    android:textColor="@color/white"/>
+ <EditText
+     android:id="@+id/etFeedbackName"
+     android:textColorHint="@color/black"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:background="@color/grey"
+     android:hint="Enter your name"
+     android:textColor="@color/black"
+     android:textSize="20sp"
+     android:padding="10dp"
+     android:layout_marginTop="20dp"
+     android:layout_marginStart="30dp"
+     android:layout_marginEnd="30dp"
+     />
+    <EditText
+     android:id="@+id/etFeedbackEmail"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+        android:textColorHint="@color/black"
+        android:background="@color/grey"
+     android:hint="Enter your Email"
+     android:textColor="@color/black"
+     android:textSize="20sp"
+     android:padding="10dp"
+     android:layout_marginTop="20dp"
+     android:layout_marginStart="30dp"
+     android:layout_marginEnd="30dp"
+     />
+
+    <EditText
+        android:id="@+id/etFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/grey"
+        android:gravity="top"
+        android:textColorHint="@color/black"
+        android:hint="Enter your feedback"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnFeedbackSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:text="Submit"
+        android:backgroundTint="@color/YELLOW"
+        android:textColor="@color/black"/>
+</LinearLayout>
