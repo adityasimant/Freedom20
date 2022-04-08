@@ -31,20 +31,20 @@
      android:layout_marginStart="30dp"
      android:layout_marginEnd="30dp"
      />
-    <EditText
-     android:id="@+id/etFeedbackEmail"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-        android:textColorHint="@color/black"
-        android:background="@color/grey"
-     android:hint="Enter your Email"
-     android:textColor="@color/black"
-     android:textSize="20sp"
-     android:padding="10dp"
-     android:layout_marginTop="20dp"
-     android:layout_marginStart="30dp"
-     android:layout_marginEnd="30dp"
-     />
+<!--    <EditText-->
+<!--     android:id="@+id/etFeedbackEmail"-->
+<!--     android:layout_width="match_parent"-->
+<!--     android:layout_height="wrap_content"-->
+<!--        android:textColorHint="@color/black"-->
+<!--        android:background="@color/grey"-->
+<!--     android:hint="Enter your Email"-->
+<!--     android:textColor="@color/black"-->
+<!--     android:textSize="20sp"-->
+<!--     android:padding="10dp"-->
+<!--     android:layout_marginTop="20dp"-->
+<!--     android:layout_marginStart="30dp"-->
+<!--     android:layout_marginEnd="30dp"-->
+<!--     />-->
 
     <EditText
         android:id="@+id/etFeedback"

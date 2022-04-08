@@ -16,7 +16,7 @@ import com.example.freedom20.R;
 
 public class FeedbackFragment extends Fragment {
 
-    EditText name,feedback,email;
+    EditText name,feedback;
     Button submit;
     public FeedbackFragment() {
         // Required empty public constructor
@@ -36,29 +36,25 @@ public class FeedbackFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_feedback, container, false);
         name = view.findViewById(R.id.etFeedbackName);
         feedback = view.findViewById(R.id.etFeedback);
-        email = view.findViewById(R.id.etFeedbackEmail);
+//        email = view.findViewById(R.id.etFeedbackEmail);
         submit = view.findViewById(R.id.btnFeedbackSubmit);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Intent.ACTION_SEND);
-                i.setType("message/html");
-                i.putExtra(Intent.EXTRA_EMAIL, email.getText());
-
+                i.setType("message/rfc822");
+                i.putExtra(android.content.Intent.EXTRA_EMAIL,new String[] { "adityasimant88@gmail.com" });
                 i.putExtra(Intent.EXTRA_SUBJECT, "feedback from F20");
-                i.putExtra(Intent.EXTRA_TEXT, "Name : " + name.getText() + "\n Feedback : " + feedback.getText());
+                i.putExtra(Intent.EXTRA_TEXT, "Name : " + name.getText().toString() + "\n Feedback : " + feedback.getText().toString());
 
-                try {
-                    startActivity(Intent.createChooser(i,"Select your email "));
-                }
-                catch (android.content.ActivityNotFoundException exception){
-                    Toast.makeText(getContext(), "email client not found ", Toast.LENGTH_SHORT).show();
-                }
+                startActivity(Intent.createChooser(i,"Select your email "));
+
 
 
 
             }
+
         });
 
 
