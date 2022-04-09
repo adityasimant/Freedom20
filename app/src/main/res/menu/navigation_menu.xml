@@ -29,9 +29,9 @@
                 android:icon="@drawable/terms"
                 android:title="@string/nav_terms_conditions" />
             <item
-                android:id="@+id/more"
-                android:icon="@drawable/more"
-                android:title="@string/more" />
+                android:id="@+id/logout"
+                android:icon="@drawable/logout"
+                android:title="@string/Logout" />
         </menu>
     </item>
 

@@ -52,7 +52,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="4dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/algorithm"
+        android:src="@drawable/ic_img_placeholder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -142,6 +142,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         >
@@ -155,10 +156,9 @@
             app:cardCornerRadius="8dp">
 
             <LinearLayout
-                android:layout_width="115dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
                 android:padding="3dp"
-
                 android:orientation="vertical">
 
 
@@ -171,11 +171,11 @@
                     android:layout_marginStart="5dp"
                     android:text="Followers"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView17"
+                    android:id="@+id/TVFollowerNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -196,8 +196,8 @@
             app:cardCornerRadius="8dp">
 
             <LinearLayout
-                android:layout_width="115dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
                 android:padding="3dp"
                 android:orientation="vertical">
 
@@ -211,11 +211,11 @@
                     android:layout_marginStart="5dp"
                     android:text="Following"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/TVFollowingNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -235,8 +235,8 @@
             app:cardCornerRadius="8dp">
 
             <LinearLayout
-                android:layout_width="115dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
                 android:padding="3dp"
                 android:orientation="vertical">
 
@@ -250,11 +250,11 @@
                     android:layout_marginStart="5dp"
                     android:text="Post"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView27"
+                    android:id="@+id/TVPost"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"

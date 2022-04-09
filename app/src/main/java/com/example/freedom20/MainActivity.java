@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import com.example.freedom20.fragments.fragments.ExploreFragment;
@@ -106,7 +107,10 @@ public class MainActivity extends AppCompatActivity {
 
                        break;
 
-                   case R.id.more:
+                      case R.id.logout:
+                          auth.signOut();
+                          Intent intent1 = new Intent(MainActivity.this,loginActivity.class);
+                          startActivity(intent1);
                        break;
 
                    case R.id.nav_rate:

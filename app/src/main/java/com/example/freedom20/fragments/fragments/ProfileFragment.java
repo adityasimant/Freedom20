@@ -42,7 +42,7 @@ public class ProfileFragment extends Fragment {
     }
 
     Button cover;
-    TextView username,bio;
+    TextView username,bio,followers,following,posts;
     ImageView coverPhoto, profilepic, discover;
     FirebaseAuth auth;
     FirebaseStorage storage;
@@ -70,6 +70,7 @@ public class ProfileFragment extends Fragment {
         profilepic = view.findViewById(R.id.userProfilePic);
         bio = view.findViewById(R.id.bio);
         discover = view.findViewById(R.id.discoverPeople);
+        followers = view.findViewById(R.id.TVFollowerNumber);
 
         database.getReference().child("user").child(auth.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -87,10 +88,9 @@ public class ProfileFragment extends Fragment {
 
                     username.setText(user.getName());
                     bio.setText(user.getUsername());
-                    model.setName(user.getName());
-                    model.setEmail(user.getEmail());
-                    model.setProfileUrl(user.getProfile());
+                    if (user.getFollowerCount() > 0) {
 
+                    }
                 }
             }
 
