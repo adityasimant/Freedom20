@@ -89,7 +89,7 @@ public class ProfileFragment extends Fragment {
                     username.setText(user.getName());
                     bio.setText(user.getUsername());
                     if (user.getFollowerCount() > 0) {
-
+                        followers.setText(user.getFollowerCount() + "");
                     }
                 }
             }
