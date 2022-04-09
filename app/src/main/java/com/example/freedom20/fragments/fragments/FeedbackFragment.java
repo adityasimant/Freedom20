@@ -50,9 +50,6 @@ public class FeedbackFragment extends Fragment {
 
                 startActivity(Intent.createChooser(i,"Select your email "));
 
-
-
-
             }
 
         });

@@ -21,6 +21,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <!--    navigatin drawer-->
     <string name="open">Open</string>
+    <string name="Notif">Notifications</string>
     <string name="close">Close</string>
     <string name="email">adityasimant@gmail.com</string>
     <string name="facebook_page">Follow on Facebook</string>

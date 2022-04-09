@@ -7,8 +7,8 @@
             android:title="@string/website" />
         <item
             android:id="@+id/facebookPage"
-            android:icon="@drawable/ic_baseline_account_circle_24"
-            android:title="@string/facebook_page" />
+            android:icon="@drawable/notification"
+            android:title="@string/Notif" />
     </group>
     <item android:title="@string/communication">
         <menu>

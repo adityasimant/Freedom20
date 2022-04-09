@@ -8,6 +8,7 @@ public class User {
 
 
 
+    int FollowerCount;
     private String userID;
 
     public String getProfile() {
@@ -23,6 +24,14 @@ public class User {
 
 
     public User() {
+    }
+
+    public int getFollowerCount() {
+        return FollowerCount;
+    }
+
+    public void setFollowerCount(int followerCount) {
+        FollowerCount = followerCount;
     }
 
     public String getCoverPhoto() {

@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.freedom20.Adapter.userAdapter;
@@ -29,7 +30,6 @@ public class DiscoverFragment extends Fragment {
     FirebaseAuth auth;
     FirebaseDatabase database;
     RecyclerView RV;
-
     public DiscoverFragment() {
         // Required empty public constructor
     }
@@ -51,6 +51,7 @@ public class DiscoverFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_discover, container, false);
 
         RV = view.findViewById(R.id.RVfollow);
+
         userAdapter adapter = new userAdapter(getContext(),list);
 
         database.getReference().child("user").addListenerForSingleValueEvent(new ValueEventListener() {
