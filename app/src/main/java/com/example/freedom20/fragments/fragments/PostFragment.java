@@ -146,10 +146,21 @@ public class PostFragment extends Fragment {
                             @Override
                             public void onSuccess(Uri uri) {
                                 Dashboard dashboard = new Dashboard();
-                                dashboard.setPostImg(uri.toString());
+
+                                String temp = uri.toString();
+
+                                if (temp != ""){
+                                    dashboard.setPostImg(uri.toString());
+                                }
+
                                 dashboard.setPostedBy(auth.getUid());
-                                dashboard.setHpost(etHpost.getText().toString());
-                                dashboard.setMpost(etMpost.getText().toString());
+                                if (etHpost.getText().toString() != ""){
+                                    dashboard.setHpost(etHpost.getText().toString());
+                                }
+
+                                if (etMpost.getText().toString() != ""){
+                                    dashboard.setMpost(etMpost.getText().toString());
+                                }
                                 dashboard.setPostedAt(new Date().getTime());
 
 

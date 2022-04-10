@@ -22,15 +22,31 @@
 
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/imgVprofilepic"
-                android:layout_width="50dp"
-                android:layout_height="62dp"
-                android:layout_margin="8dp"
-                android:layout_marginTop="40dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="15dp"
+                android:elevation="12dp"
+                android:innerRadius="0dp"
+                android:shape="ring"
+                android:thicknessRatio="1.9"
+                app:cardCornerRadius="30dp">
+
+                <ImageView
+                    android:id="@+id/imgVprofilepic"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_baseline_account_circle_24" />
+
+            </androidx.cardview.widget.CardView>
+
+
 
             <LinearLayout
                 android:layout_width="313dp"
@@ -92,20 +108,15 @@
             android:textSize="15dp"
             android:textStyle="bold"
             android:padding="3dp"
-            android:layout_margin="5dp"
+            android:layout_margin="3dp"
             android:maxHeight="100dp"
             android:text="This is my first post"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgVprofilepic" />
+            android:textColor="@color/white" />
 
             <ImageView
                 android:id="@+id/ImgPost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="1dp"
                 android:visibility="invisible"
                 android:src="@drawable/ic_img_placeholder"
                 />
@@ -117,7 +128,7 @@
             android:textColor="#E4E4E4"
             android:text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident sometimes on purpose (injected humour and the like)."
             android:textSize="14dp"
-            android:padding="7dp"
+            android:padding="3dp"
             android:layout_margin="3dp"
 
              />

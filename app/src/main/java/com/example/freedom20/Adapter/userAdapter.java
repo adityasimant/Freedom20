@@ -124,7 +124,7 @@ public class userAdapter extends RecyclerView.Adapter<userAdapter.viewHolder>{
             username = itemView.findViewById(R.id.username1);
             follow = itemView.findViewById(R.id.btnfollow);
             bio = itemView.findViewById(R.id.bio1);
-            ProfilePic = itemView.findViewById(R.id.userProfilePic);
+            ProfilePic = itemView.findViewById(R.id.DiscoveruserProfilePic);
 
         }
     }
