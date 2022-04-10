@@ -43,7 +43,7 @@ public class ProfileFragment extends Fragment {
 
     Button cover;
     TextView username,bio,followers,following,posts;
-    ImageView coverPhoto, profilepic, discover;
+    ImageView coverPhoto, profilepic;
     FirebaseAuth auth;
     FirebaseStorage storage;
     FirebaseDatabase database;
@@ -69,7 +69,6 @@ public class ProfileFragment extends Fragment {
         username = view.findViewById(R.id.username);
         profilepic = view.findViewById(R.id.userProfilePic);
         bio = view.findViewById(R.id.bio);
-        discover = view.findViewById(R.id.discoverPeople);
         followers = view.findViewById(R.id.TVFollowerNumber);
 
         database.getReference().child("user").child(auth.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -99,19 +98,7 @@ public class ProfileFragment extends Fragment {
 
             }
         });
-        discover.setOnClickListener(new View.OnClickListener() {
-            @Override
 
-            public void onClick(View view) {
-
-//                Intent myintent = new Intent(view.getContext(),DiscoverFragment.class);
-//                startActivity(myintent);
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.container,new DiscoverFragment());
-                transaction.commit();
-
-            }
-        });
 
 
 

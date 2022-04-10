@@ -28,7 +28,8 @@
     <string name="communication">Communication</string>
     <string name="nav_rate">Rate or Feedback</string>
     <string name="nav_share">Share</string>
-    <string name="nav_privacy_policy">Privacy Policy</string>
+    <string name="discover_people">Discover People</string>
+    <string name="notification">Notifications</string>
     <string name="nav_terms_conditions">Terms and Conditions</string>
     <string name="website">Visit Website</string>
     <string name="Logout">Logout</string>

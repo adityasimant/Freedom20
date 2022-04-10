@@ -27,14 +27,6 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/discoverPeople"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center_vertical"
-            android:padding="2dp"
-            android:layout_marginStart="5dp"
-            android:src="@drawable/ic_baseline_people_24" />
 
     </LinearLayout>
 
@@ -78,6 +70,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/Darkgrey"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal">
 
 

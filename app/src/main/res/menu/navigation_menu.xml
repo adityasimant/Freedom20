@@ -17,17 +17,18 @@
                 android:icon="@drawable/rate"
                 android:title="@string/nav_rate" />
             <item
+                android:id="@+id/notification"
+                android:icon="@drawable/notification"
+                android:title="@string/notification" />
+            <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/share"
                 android:title="@string/nav_share" />
             <item
-                android:id="@+id/nav_privacy_policy"
-                android:icon="@drawable/privacy"
-                android:title="@string/nav_privacy_policy" />
-            <item
-                android:id="@+id/nav_terms_conditions"
-                android:icon="@drawable/terms"
-                android:title="@string/nav_terms_conditions" />
+                android:id="@+id/discover_people"
+                android:icon="@drawable/ic_baseline_people_24"
+                android:title="@string/discover_people" />
+
             <item
                 android:id="@+id/logout"
                 android:icon="@drawable/logout"

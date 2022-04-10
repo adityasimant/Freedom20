@@ -100,10 +100,12 @@ public class MainActivity extends AppCompatActivity {
                    case R.id.website:
                        break;
 
-                   case R.id.nav_privacy_policy:
-                       break;
+                      case R.id.discover_people:
+                          transaction1.replace(R.id.container,new DiscoverFragment());
+                          break;
 
-                   case R.id.nav_terms_conditions:
+                      case R.id.notification:
+
 
                        break;
 

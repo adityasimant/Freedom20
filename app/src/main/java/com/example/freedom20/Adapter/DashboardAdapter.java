@@ -30,20 +30,14 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
     @Override
     public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.layout_rv_sample,parent,false);
+
         return new viewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         Dashboard model = list.get(position);
-        holder.ProfilePic.setImageResource(model.getProfile());
-        holder.username.setText(model.getName());
-        holder.post.setText(model.getPost());
-        holder.bio.setText(model.getBio());
-        holder.upvote.setText(model.getLike());
-        holder.comment.setText(model.getComment());
-        holder.share .setText(model.getShare());
-        holder.text.setText(model.getText());
+
     }
 
     @Override
@@ -52,21 +46,14 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
     }
 
     public class viewHolder extends RecyclerView.ViewHolder {
-        ImageView ProfilePic, more;
-        TextView username,bio,post,upvote,comment,text;
-        Button share;
+        TextView Mpost,Hpost;
+        ImageView ImgPost;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
 
-            username = itemView.findViewById(R.id.UserName);
-            more = itemView.findViewById(R.id.imgVmore);
-            ProfilePic = itemView.findViewById(R.id.imgVprofilepic);
-            bio = itemView.findViewById(R.id.about);
-            post = itemView.findViewById(R.id.post);
-            upvote = itemView.findViewById(R.id.idUpvote);
-            comment = itemView.findViewById(R.id.idComment);
-            share = itemView.findViewById(R.id.btnShare);
-            text = itemView.findViewById(R.id.TVtext);
+            Mpost =itemView.findViewById(R.id.postContent);
+            Hpost =itemView.findViewById(R.id.PostHeader);
+            ImgPost = itemView.findViewById(R.id.ImgPost);
 
         }
     }

@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/userProfilePic"
+            android:id="@+id/DiscoveruserProfilePic"
             android:layout_width="80dp"
             android:layout_height="match_parent"
 

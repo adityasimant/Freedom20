@@ -1,87 +1,70 @@
 package com.example.freedom20.Models;
 
 public class Dashboard {
+    private String PostId;
+    private String PostImg;
+    private String PostedBy;
+    private String Hpost;
+    private String Mpost;
+    private long PostedAt;
 
-    int profile;
-    String post;
-    String name;
-    String bio;
-    String like;
-    String comment;
-    String share;
-    String text;
-
-    public Dashboard(int profile,String text, String post, String name, String bio, String like, String comment) {
-        this.profile = profile;
-        this.text = text;
-        this.post = post;
-        this.name = name;
-        this.bio = bio;
-        this.like = like;
-        this.comment = comment;
+    public Dashboard(String postId, String postImg, String postedBy, String hpost, String mpost, long postedAt) {
+        PostId = postId;
+        PostImg = postImg;
+        PostedBy = postedBy;
+        Hpost = hpost;
+        Mpost = mpost;
+        PostedAt = postedAt;
     }
 
-    public String getText() {
-        return text;
+    public Dashboard() {
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public String getPostId() {
+        return PostId;
     }
 
-    public int getProfile() {
-        return profile;
+    public void setPostId(String postId) {
+        PostId = postId;
     }
 
-    public void setProfile(int profile) {
-        this.profile = profile;
+    public String getPostImg() {
+        return PostImg;
     }
 
-    public String getPost() {
-        return post;
+    public void setPostImg(String postImg) {
+        PostImg = postImg;
     }
 
-    public void setPost(String post) {
-        this.post = post;
+    public String getPostedBy() {
+        return PostedBy;
     }
 
-    public String getName() {
-        return name;
+    public void setPostedBy(String postedBy) {
+        PostedBy = postedBy;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getHpost() {
+        return Hpost;
     }
 
-    public String getBio() {
-        return bio;
+    public void setHpost(String hpost) {
+        Hpost = hpost;
     }
 
-    public void setBio(String bio) {
-        this.bio = bio;
+    public String getMpost() {
+        return Mpost;
     }
 
-    public String getLike() {
-        return like;
+    public void setMpost(String mpost) {
+        Mpost = mpost;
     }
 
-    public void setLike(String like) {
-        this.like = like;
+    public long getPostedAt() {
+        return PostedAt;
     }
 
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
-
-    public String getShare() {
-        return share;
-    }
-
-    public void setShare(String share) {
-        this.share = share;
+    public void setPostedAt(long postedAt) {
+        PostedAt = postedAt;
     }
 }

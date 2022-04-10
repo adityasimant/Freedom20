@@ -23,63 +23,13 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/etpost"
-        android:layout_width="match_parent"
-        android:layout_height="207dp"
-        android:textColor="@color/grey"
-        android:background="@color/Darkgrey"
-        android:textColorHint="@color/grey"
-        android:padding="5dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:ems="10"
-
-        android:gravity="start"
-        android:hint="share something..."
-        android:inputType="textPersonName" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal"
-        android:padding="2dp">
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_margin="5dp"
-            android:background="@color/black"
-            android:src="@drawable/ic_img_placeholder" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_margin="5dp"
-            android:background="@color/black"
-            android:src="@drawable/ic_baseline_camera_alt_24" />
-
-        <ImageView
-            android:id="@+id/attachFile"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_margin="5dp"
-            android:background="@color/black"
-            android:src="@drawable/ic_baseline_attach_file_24" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
         <Button
@@ -94,14 +44,88 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnPost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/YELLOW"
             android:layout_marginStart="5dp"
             android:layout_weight="1"
-            android:textColor="@color/Darkgrey"
+            android:backgroundTint="@color/YELLOW"
+            android:enabled="false"
             android:text="Post"
+            android:textColor="@color/Darkgrey"
             android:textStyle="bold" />
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/etHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:background="@color/grey"
+        android:textColorHint="@color/Darkgrey"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:gravity="start"
+        android:hint="Heading"
+        android:inputType="textPersonName" />
+
+    <ImageView
+        android:id="@+id/ImgViewPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:visibility="invisible"
+        android:src="@drawable/ic_img_placeholder"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"/>
+
+    <EditText
+        android:id="@+id/etpost"
+        android:layout_width="match_parent"
+        android:layout_height="207dp"
+        android:textColor="@color/black"
+        android:background="@color/grey"
+        android:textColorHint="@color/Darkgrey"
+        android:padding="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:gravity="start"
+        android:hint="share something..."
+        android:inputType="textPersonName" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/gallerySelect"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:src="@drawable/ic_img_placeholder" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:src="@drawable/ic_baseline_camera_alt_24" />
+
+
+    </LinearLayout>
+
 </LinearLayout>
