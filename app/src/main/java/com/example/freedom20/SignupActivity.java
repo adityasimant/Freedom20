@@ -41,6 +41,7 @@ public class SignupActivity extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<AuthResult> task) {
                                         if (task.isSuccessful()) {
+
                                             User user = new User(binding.etUsername.getText().toString(),
                                                     binding.etEmail.getText().toString(),
                                                     binding.etName.getText().toString(),

@@ -138,44 +138,59 @@ public class PostFragment extends Fragment {
             public void onClick(View view) {
                 dialog.show();
                 final StorageReference reference = storage.getReference().child("post").child(auth.getUid()).child(new Date().getTime() + "");
+               try {
+                   reference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                       @Override
+                       public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                           reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                               @Override
+                               public void onSuccess(Uri uri) {
+                                   Dashboard dashboard = new Dashboard();
 
-                reference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                            @Override
-                            public void onSuccess(Uri uri) {
-                                Dashboard dashboard = new Dashboard();
+                                   String temp = uri.toString();
 
-                                String temp = uri.toString();
+                                   if (temp != "") {
+                                       dashboard.setPostImg(uri.toString());
+                                   }
 
-                                if (temp != ""){
-                                    dashboard.setPostImg(uri.toString());
-                                }
+                                   dashboard.setPostedBy(auth.getUid());
+                                   if (etHpost.getText().toString() != "") {
+                                       dashboard.setHpost(etHpost.getText().toString());
+                                   }
 
-                                dashboard.setPostedBy(auth.getUid());
-                                if (etHpost.getText().toString() != ""){
-                                    dashboard.setHpost(etHpost.getText().toString());
-                                }
-
-                                if (etMpost.getText().toString() != ""){
-                                    dashboard.setMpost(etMpost.getText().toString());
-                                }
-                                dashboard.setPostedAt(new Date().getTime());
+                                   if (etMpost.getText().toString() != "") {
+                                       dashboard.setMpost(etMpost.getText().toString());
+                                   }
+                                   dashboard.setPostedAt(new Date().getTime());
 
 
+                                   database.getReference().child("post").push().setValue(dashboard).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                       @Override
+                                       public void onSuccess(Void unused) {
+                                           dialog.dismiss();
+                                           Toast.makeText(getContext(), "Dashboard succesful", Toast.LENGTH_SHORT).show();
+                                       }
+                                   });
+                               }
+                           });
+                       }
+                   });
+               }
+               catch (Exception ex){
+                   Dashboard dashboard = new Dashboard();
+                   dashboard.setHpost(etHpost.getText().toString());
+                   dashboard.setMpost(etMpost.getText().toString());
+                   dashboard.setPostedAt(new Date().getTime());
+                   dashboard.setPostedBy(FirebaseAuth.getInstance().getUid());
+                   database.getReference().child("post").push().setValue(dashboard).addOnSuccessListener(new OnSuccessListener<Void>() {
+                       @Override
+                       public void onSuccess(Void unused) {
+                           dialog.dismiss();
+                           Toast.makeText(getContext(), "Dashboard succesful", Toast.LENGTH_SHORT).show();
+                       }
+                   });
 
-                                database.getReference().child("post").push().setValue(dashboard).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                    @Override
-                                    public void onSuccess(Void unused) {
-                                        dialog.dismiss();
-                                        Toast.makeText(getContext(), "Dashboard succesful", Toast.LENGTH_SHORT).show();
-                                    }
-                                });
-                            }
-                        });
-                    }
-                });
+               }
             }
         });
         return view;

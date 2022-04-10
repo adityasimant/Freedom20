@@ -43,19 +43,20 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         Dashboard model = list.get(position);
-
-        String temp = model.getPostImg();
-        if (temp != "") {
+        try{
             holder.ImgPost.setVisibility(View.VISIBLE);
-            Picasso.get().load(model.getPostImg()).placeholder(R.drawable.ic_img_placeholder)
+            Picasso.get().load(model.getPostImg())
                     .into(holder.ImgPost);
-        }
-        else {
-            holder.ImgPost.setVisibility(View.GONE);
-        }
 
-        holder.Hpost.setText(model.getHpost());
-        holder.Mpost.setText(model.getMpost());
+            holder.Hpost.setText(model.getHpost());
+            holder.Mpost.setText(model.getMpost());
+
+        }
+        catch (Exception exception){
+            holder.ImgPost.setVisibility(View.GONE);
+            holder.Hpost.setText(model.getHpost());
+            holder.Mpost.setText(model.getMpost());
+        }
 
 
         FirebaseDatabase.getInstance().getReference().child("user")
