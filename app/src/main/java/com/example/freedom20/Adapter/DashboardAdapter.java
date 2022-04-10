@@ -12,7 +12,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.freedom20.Models.Dashboard;
+import com.example.freedom20.Models.User;
 import com.example.freedom20.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -38,6 +44,37 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         Dashboard model = list.get(position);
 
+        String temp = model.getPostImg();
+        if (temp != "") {
+            holder.ImgPost.setVisibility(View.VISIBLE);
+            Picasso.get().load(model.getPostImg()).placeholder(R.drawable.ic_img_placeholder)
+                    .into(holder.ImgPost);
+        }
+        else {
+            holder.ImgPost.setVisibility(View.GONE);
+        }
+
+        holder.Hpost.setText(model.getHpost());
+        holder.Mpost.setText(model.getMpost());
+
+
+        FirebaseDatabase.getInstance().getReference().child("user")
+                .child(model.getPostedBy()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User user = snapshot.getValue(User.class);
+                Picasso.get().load(user.getProfile())
+                        .placeholder(R.drawable.ic_img_placeholder)
+                        .into(holder.ProfileImage);
+                holder.name.setText(user.getName());
+                holder.bio.setText(user.getUsername());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     @Override
@@ -46,14 +83,18 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
     }
 
     public class viewHolder extends RecyclerView.ViewHolder {
-        TextView Mpost,Hpost;
-        ImageView ImgPost;
+        TextView Mpost,Hpost,name ,bio;
+        ImageView ImgPost,ProfileImage;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
 
             Mpost =itemView.findViewById(R.id.postContent);
             Hpost =itemView.findViewById(R.id.PostHeader);
             ImgPost = itemView.findViewById(R.id.ImgPost);
+            ProfileImage = itemView.findViewById(R.id.imgVprofilepic);
+            name = itemView.findViewById(R.id.UserName);
+            bio = itemView.findViewById(R.id.about);
+
 
         }
     }

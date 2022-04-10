@@ -108,7 +108,7 @@
                 android:padding="1dp"
                 android:visibility="invisible"
                 android:src="@drawable/ic_img_placeholder"
-                android:scaleType="centerCrop"/>
+                />
 
             <TextView
             android:id="@+id/postContent"

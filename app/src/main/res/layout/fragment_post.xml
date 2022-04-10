@@ -100,20 +100,21 @@
 
         </LinearLayout>
 
-    <EditText
-        android:id="@+id/etHeader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:background="@drawable/btn_following"
-        android:textColorHint="@color/Darkgrey"
-        android:padding="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:ems="10"
-        android:gravity="start"
-        android:hint="Heading"
-        android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/etHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/btn_following"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="Heading"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Darkgrey" />
 
     <ImageView
         android:id="@+id/ImgViewPost"
@@ -127,20 +128,21 @@
         android:layout_marginTop="10dp"
         android:scaleType="centerCrop"/>
 
-    <EditText
-        android:id="@+id/etpost"
-        android:layout_width="match_parent"
-        android:layout_height="207dp"
-        android:textColor="@color/black"
-        android:background="@drawable/btn_following"
-        android:textColorHint="@color/Darkgrey"
-        android:padding="5dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:ems="10"
-        android:gravity="start"
-        android:hint="share something..."
-        android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/etpost"
+            android:layout_width="match_parent"
+            android:layout_height="207dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_following"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="share something..."
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Darkgrey" />
     </LinearLayout>
 </ScrollView>
