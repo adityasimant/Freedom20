@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/cardview"
     android:layout_width="match_parent"
-    android:layout_height="275dp"
+    android:layout_height="287dp"
     android:layout_margin="0dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:backgroundTint="@color/Darkgrey"
@@ -12,9 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:cardCornerRadius="8dp"
-        android:padding="4dp"
+        android:padding="2dp"
+        android:layout_margin="4dp"
         app:cardElevation="8dp"
-        android:layout_margin="10dp"
         >
 
 
@@ -69,6 +69,15 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Click to view full news"
+            android:textColor="@color/YELLOW"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="by aditya simant"
             android:textSize="13sp"
@@ -85,6 +94,7 @@
             android:textSize="13sp"
             android:textColor="@color/white"
             android:padding="5dp"/>
+
     </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.cardview.widget.CardView>
