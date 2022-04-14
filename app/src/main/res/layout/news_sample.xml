@@ -69,7 +69,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Click to view full news"
+            android:text="Read more"
+            android:textStyle="bold"
             android:textColor="@color/YELLOW"
             android:gravity="center_horizontal"
             android:padding="2dp"
