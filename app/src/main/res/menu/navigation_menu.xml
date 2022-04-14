@@ -5,10 +5,6 @@
             android:id="@+id/website"
             android:icon="@drawable/website"
             android:title="@string/website" />
-        <item
-            android:id="@+id/facebookPage"
-            android:icon="@drawable/notification"
-            android:title="@string/Notif" />
     </group>
     <item android:title="@string/communication">
         <menu>

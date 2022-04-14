@@ -57,7 +57,8 @@ public class homeFragment extends Fragment {
 
 
         dashboardAdapter = new DashboardAdapter(DashboardList,getContext());
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        LinearLayoutManager layoutManager
+                = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, true);
         dashboardRV.setLayoutManager(layoutManager);
         dashboardRV.setNestedScrollingEnabled(false);
         dashboardRV.setAdapter(dashboardAdapter);

@@ -94,8 +94,6 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction transaction1 = getSupportFragmentManager().beginTransaction();
                   switch (item.getItemId()) {
 
-                   case R.id.facebookPage:
-                       break;
 
                    case R.id.website:
                        break;
