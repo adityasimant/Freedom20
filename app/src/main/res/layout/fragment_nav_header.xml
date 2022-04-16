@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="156dp"
+    android:layout_height="wrap_content"
     android:background="@color/Darkgrey"
     android:orientation="vertical"
     android:padding="16dp">
@@ -33,6 +33,6 @@
         android:layout_gravity="center_horizontal"
 
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:text="Gain control for your financial future !"
+        android:text="Gain control of your financial future "
         android:textColor="@color/white" />
 </LinearLayout>

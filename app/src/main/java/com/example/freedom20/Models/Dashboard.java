@@ -9,16 +9,17 @@ public class Dashboard {
     private long PostedAt;
 
 
-
-    private int postLikes;
-
-    public int getPostLikes() {
-        return postLikes;
+    public int getPostLike() {
+        return postLike;
     }
 
-    public void setPostLikes(int postLikes) {
-        this.postLikes = postLikes;
+    public void setPostLike(int postLike) {
+        this.postLike = postLike;
     }
+
+    private int postLike;
+
+
 
     public Dashboard(String postId, String postImg, String postedBy, String hpost, String mpost, long postedAt) {
         PostId = postId;
@@ -79,4 +80,5 @@ public class Dashboard {
     public void setPostedAt(long postedAt) {
         PostedAt = postedAt;
     }
+
 }

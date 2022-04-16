@@ -52,14 +52,14 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
 
             holder.Hpost.setText(model.getHpost());
             holder.Mpost.setText(model.getMpost());
-            holder.upvote.setText(model.getPostLikes()+"");
+            holder.upvote.setText(model.getPostLike()+"");
 
         }
         catch (Exception exception){
             holder.ImgPost.setVisibility(View.GONE);
              holder.Hpost.setText(model.getHpost());
             holder.Mpost.setText(model.getMpost());
-            holder.upvote.setText(model.getPostLikes()+"");
+            holder.upvote.setText(model.getPostLike()+"");
 
         }
 
@@ -108,7 +108,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
                                             .child("post")
                                             .child(model.getPostId())
                                             .child("postLike")
-                                            .setValue(model.getPostLikes() + 1).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                            .setValue(model.getPostLike() + 1).addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void unused) {
                                             holder.upvote.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_upvoted,0,0,0);
