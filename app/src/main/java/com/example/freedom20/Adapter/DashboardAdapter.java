@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.freedom20.Models.Dashboard;
 import com.example.freedom20.Models.User;
 import com.example.freedom20.R;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -50,12 +52,15 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
 
             holder.Hpost.setText(model.getHpost());
             holder.Mpost.setText(model.getMpost());
+            holder.upvote.setText(model.getPostLikes()+"");
 
         }
         catch (Exception exception){
             holder.ImgPost.setVisibility(View.GONE);
-            holder.Hpost.setText(model.getHpost());
+             holder.Hpost.setText(model.getHpost());
             holder.Mpost.setText(model.getMpost());
+            holder.upvote.setText(model.getPostLikes()+"");
+
         }
 
 
@@ -76,6 +81,53 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
 
             }
         });
+
+        FirebaseDatabase.getInstance().getReference()
+                .child("post")
+                .child(model.getPostId())
+                .child("likes")
+                .child(FirebaseAuth.getInstance().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()){
+                    holder.upvote.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_upvoted,0,0,0);
+                }
+                else {
+                    holder.upvote.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            FirebaseDatabase.getInstance().getReference()
+                                    .child("post")
+                                    .child(model.getPostId())
+                                    .child("likes")
+                                    .child(FirebaseAuth.getInstance().getUid())
+                                    .setValue(true).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+                                    FirebaseDatabase.getInstance().getReference()
+                                            .child("post")
+                                            .child(model.getPostId())
+                                            .child("postLike")
+                                            .setValue(model.getPostLikes() + 1).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void unused) {
+                                            holder.upvote.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_upvoted,0,0,0);
+                                        }
+                                    });
+                                }
+                            });
+
+                        }
+                    });
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     @Override
@@ -84,7 +136,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
     }
 
     public class viewHolder extends RecyclerView.ViewHolder {
-        TextView Mpost,Hpost,name ,bio;
+        TextView Mpost,Hpost,name ,bio,upvote;
         ImageView ImgPost,ProfileImage;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
@@ -95,6 +147,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
             ProfileImage = itemView.findViewById(R.id.imgVprofilepic);
             name = itemView.findViewById(R.id.UserName);
             bio = itemView.findViewById(R.id.about);
+            upvote = itemView.findViewById(R.id.idUpvote);
 
 
         }

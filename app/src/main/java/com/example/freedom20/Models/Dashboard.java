@@ -8,6 +8,18 @@ public class Dashboard {
     private String Mpost;
     private long PostedAt;
 
+
+
+    private int postLikes;
+
+    public int getPostLikes() {
+        return postLikes;
+    }
+
+    public void setPostLikes(int postLikes) {
+        this.postLikes = postLikes;
+    }
+
     public Dashboard(String postId, String postImg, String postedBy, String hpost, String mpost, long postedAt) {
         PostId = postId;
         PostImg = postImg;

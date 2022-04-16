@@ -68,8 +68,10 @@ public class homeFragment extends Fragment {
             database.getReference().child("post").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    DashboardList.clear();
                     for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                         Dashboard dashboard = dataSnapshot.getValue(Dashboard.class);
+                        dashboard.setPostId(dataSnapshot.getKey());
                         DashboardList.add(dashboard);
                     }
                     dashboardAdapter.notifyDataSetChanged();
