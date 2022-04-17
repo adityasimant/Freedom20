@@ -1,5 +1,6 @@
 package com.example.freedom20.fragments.fragments;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -47,6 +48,7 @@ public class ProfileFragment extends Fragment {
     FirebaseAuth auth;
     FirebaseStorage storage;
     FirebaseDatabase database;
+    ProgressDialog dialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,7 @@ public class ProfileFragment extends Fragment {
         auth = FirebaseAuth.getInstance();
         storage = FirebaseStorage.getInstance();
         database = FirebaseDatabase.getInstance();
+        dialog = new ProgressDialog(getContext());
 
     }
 
@@ -64,6 +67,17 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        dialog.setTitle("loading your profile ");
+        dialog.setMessage("Please wait a moment ");
+        dialog.setCancelable(false);
+        dialog.setCanceledOnTouchOutside(false);
+
+
+
+        dialog.show();
+
         cover = view.findViewById(R.id.btnEditCover);
         coverPhoto = view.findViewById(R.id.coverPhoto);
         username = view.findViewById(R.id.username);
@@ -91,6 +105,7 @@ public class ProfileFragment extends Fragment {
                         followers.setText(user.getFollowerCount() + "");
                     }
                 }
+                dialog.dismiss();
             }
 
             @Override
