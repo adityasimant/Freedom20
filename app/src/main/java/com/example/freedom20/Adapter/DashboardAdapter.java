@@ -1,6 +1,7 @@
 package com.example.freedom20.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.freedom20.CommentActivity;
 import com.example.freedom20.Models.Dashboard;
 import com.example.freedom20.Models.User;
 import com.example.freedom20.R;
@@ -82,6 +84,14 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
             }
         });
 
+        holder.comment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, CommentActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
         FirebaseDatabase.getInstance().getReference()
                 .child("post")
                 .child(model.getPostId())
@@ -136,7 +146,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
     }
 
     public class viewHolder extends RecyclerView.ViewHolder {
-        TextView Mpost,Hpost,name ,bio,upvote;
+        TextView Mpost,Hpost,name ,bio,upvote,comment;
         ImageView ImgPost,ProfileImage;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
@@ -148,7 +158,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
             name = itemView.findViewById(R.id.UserName);
             bio = itemView.findViewById(R.id.about);
             upvote = itemView.findViewById(R.id.idUpvote);
-
+            comment = itemView.findViewById(R.id.idComment);
 
         }
     }
