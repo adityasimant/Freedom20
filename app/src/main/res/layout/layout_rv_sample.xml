@@ -117,7 +117,8 @@
                 android:id="@+id/ImgPost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="invisible"
+                android:maxHeight="400dp"
+                android:visibility="gone"
                 android:src="@drawable/ic_img_placeholder"
                 />
 
@@ -177,7 +178,7 @@
 
             <Button
                 android:id="@+id/btnShare"
-                android:layout_width="61dp"
+                android:layout_width="41dp"
                 android:layout_height="38dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="5dp"
@@ -185,10 +186,8 @@
                 android:drawableLeft="@drawable/ic_baseline_arrow_right_alt_24"
                 android:gravity="center_vertical"
                 android:paddingLeft="5dp"
-                android:text="3"
                 android:textColor="@color/green"
                 android:textSize="14sp"
-
                 android:textStyle="bold"
                 app:iconPadding="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
