@@ -42,7 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="10dp"
                 android:background="@color/Darkgrey"
                 android:padding="3dp"
                 android:text="Financial Books :"
@@ -62,13 +62,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="4dp"
                 android:background="@color/Darkgrey"
                 android:padding="3dp"
                 android:text="Self-help Books :"
-                android:textColor="@color/grey"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
@@ -81,13 +81,27 @@
                 android:background="@color/Darkgrey"
                 android:orientation="horizontal" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/Darkgrey"
+                android:padding="3dp"
+                android:text="Learn about stock market :"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/BooksRv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false"
-                android:layout_margin="1dp" />
+                android:layout_margin="5dp" />
 
 
         </LinearLayout>

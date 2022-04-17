@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    android:backgroundTint="@color/Darkgrey"
-    >
+    android:backgroundTint="@color/black"
+    app:cardElevation="15dp"
+    app:cardCornerRadius="15dp"
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/stockCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/Darkgrey"
+        android:backgroundTint="@color/black"
 
         >
 
@@ -20,13 +21,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/Darkgrey"
+            android:background="@color/black"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@color/Darkgrey"
+                android:background="@color/black"
                 android:orientation="vertical">
 
                 <androidx.cardview.widget.CardView
@@ -36,7 +37,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:background="@color/Darkgrey"
-                    app:cardCornerRadius="25dp">
+                    app:cardCornerRadius="10dp">
 
                     <ImageView
                         android:id="@+id/stockImg1"
@@ -65,6 +66,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:gravity="center_horizontal"
                     android:text="Learn with zerodha varsity"
 
@@ -80,35 +82,29 @@
 
                 <TextView
                     android:id="@+id/aboutCard1"
-                    android:layout_width="170dp"
-                    android:layout_height="151dp"
-                    android:layout_marginStart="5dp"
-
+                    android:layout_width="136dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:maxLines="7"
                     android:text="Investing is an important way to build wealth and save for the future.
                              Here’s what we should have learned about the stock market."
                     android:textColor="@color/white" />
-
 
 
                 <Button
                     android:id="@+id/btnclickcard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
                     android:backgroundTint="@color/YELLOW"
                     android:text="View" />
             </LinearLayout>
 
         </LinearLayout>
-
-        <View
-            android:id="@+id/view"
-            android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:background="@color/white" />
 
     </androidx.cardview.widget.CardView>
 

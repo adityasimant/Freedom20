@@ -3,11 +3,13 @@
     android:id="@+id/bookcard"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:backgroundTint="@color/Darkgrey"
+    app:cardCornerRadius="0dp"
     android:layout_margin="5dp">
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview101"
-        android:layout_width="150dp"
-        android:layout_height="240dp"
+        android:layout_width="130dp"
+        android:layout_height="210dp"
         android:layout_margin="5dp"
         android:backgroundTint="@color/black"
         app:cardCornerRadius="7dp"
@@ -38,6 +40,8 @@
                 android:layout_gravity="center_horizontal"
                 android:paddingStart="3dp"
                 android:paddingEnd="3dp"
+                android:ellipsize="end"
+                android:maxLines="2"
                 android:text="Rich dad poor dad"
                 android:textColor="@color/white"
                 android:textSize="12dp"
@@ -51,11 +55,13 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="2dp"
                 android:layout_marginBottom="5dp"
+                android:ellipsize="end"
+                android:maxLines="2"
                 android:text="Robert kiyosaki"
                 android:gravity="center_horizontal"
                 android:layout_gravity="center_horizontal"
                 android:textAlignment="center"
-                android:textColor="@color/grey"
+                android:textColor="@color/YELLOW"
                 android:textSize="10dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
