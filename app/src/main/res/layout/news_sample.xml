@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/cardview"
-    android:layout_width="match_parent"
-    android:layout_height="287dp"
+    android:layout_width="@dimen/_316sdp"
+    android:layout_height="@dimen/_230sdp"
     android:layout_margin="0dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:backgroundTint="@color/Darkgrey"
@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:text="Heading"
-            android:textSize="20dp"
+            android:textSize="@dimen/_17sdp"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:ellipsize="end"
@@ -37,7 +37,7 @@
             />
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="@dimen/_100sdp"
             android:layout_marginTop="3dp"
             android:orientation="horizontal"
             >
@@ -58,7 +58,7 @@
                 android:ellipsize="end"
                 android:maxLines="6"
                 android:padding="5dp"
-                android:textSize="15dp"
+                android:textSize="@dimen/_12sdp"
                 android:textColor="@color/grey"
                 android:text="content"
                 android:textStyle="normal"
@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="by aditya simant"
-            android:textSize="13sp"
+            android:textSize="@dimen/_10sdp"
             android:textStyle="italic"
             android:textColor="@color/white"
             android:id="@+id/author"
@@ -92,7 +92,7 @@
             android:text="{DATE}"
             android:id="@+id/Newstime"
             android:textStyle="bold"
-            android:textSize="13sp"
+            android:textSize="@dimen/_10sdp"
             android:textColor="@color/white"
             android:padding="5dp"/>
 
