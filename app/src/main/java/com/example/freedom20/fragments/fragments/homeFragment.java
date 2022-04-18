@@ -30,6 +30,8 @@ public class homeFragment extends Fragment {
     FirebaseAuth auth;
     FirebaseDatabase database;
     DashboardAdapter dashboardAdapter;
+    ProgressDialog dialog;
+
     public homeFragment() {
         // Required empty public constructor
     }
@@ -41,6 +43,8 @@ public class homeFragment extends Fragment {
 
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
+        dialog = new ProgressDialog(getContext());
+
 
 
     }
@@ -50,6 +54,18 @@ public class homeFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+
+        dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        dialog.setTitle("loading your profile ");
+        dialog.setMessage("Please wait a moment ");
+        dialog.setCancelable(false);
+        dialog.setCanceledOnTouchOutside(false);
+
+
+
+        dialog.show();
+
 
 
         dashboardRV = view.findViewById(R.id.dashboardRV);
@@ -75,6 +91,7 @@ public class homeFragment extends Fragment {
                         DashboardList.add(dashboard);
                     }
                     dashboardAdapter.notifyDataSetChanged();
+                    dialog.dismiss();
                 }
 
                 @Override

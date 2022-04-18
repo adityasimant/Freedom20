@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginTop="50dp"
+    android:layout_marginTop="@dimen/_40sdp"
     android:background="@color/Darkgrey"
     tools:context=".fragments.fragments.ProfileFragment">
 
@@ -29,12 +29,12 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_margin="@dimen/_10sdp"
                     android:background="@color/Darkgrey"
-                    android:padding="6dp"
+                    android:padding="@dimen/_3sdp"
                     android:text="Profile"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/_15sdp"
                     android:textStyle="bold" />
 
 
@@ -48,10 +48,10 @@
                 <ImageView
                     android:id="@+id/coverPhoto"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:layout_margin="5dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="4dp"
+                    android:layout_height="@dimen/_130sdp"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ic_img_placeholder"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -62,10 +62,10 @@
 
                 <Button
                     android:id="@+id/btnEditCover"
-                    android:layout_width="30dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="25dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
                     android:backgroundTint="#60FFFBFB"
                     android:padding="1dp"
                     app:icon="@drawable/edit1"
@@ -77,15 +77,15 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:background="@color/Darkgrey"
                 android:orientation="horizontal">
 
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/view2"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginStart="7dp"
                     android:elevation="12dp"
@@ -96,7 +96,7 @@
 
                     <ImageView
                         android:id="@+id/userProfilePic"
-                        android:layout_width="80dp"
+                        android:layout_width="@dimen/_60sdp"
                         android:layout_height="match_parent"
 
                         android:layout_centerHorizontal="true"
@@ -121,7 +121,7 @@
                         android:padding="5dp"
                         android:text="User"
                         android:textColor="@color/white"
-                        android:textSize="24sp"
+                        android:textSize="@dimen/_17sdp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -134,7 +134,7 @@
                         android:padding="5dp"
                         android:text="profession"
                         android:textColor="@color/grey"
-                        android:textSize="16dp" />
+                        android:textSize="@dimen/_10sdp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -156,7 +156,7 @@
                     app:cardCornerRadius="8dp">
 
                     <LinearLayout
-                        android:layout_width="100dp"
+                        android:layout_width="@dimen/_80sdp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:padding="3dp">
@@ -171,7 +171,7 @@
                             android:layout_marginStart="5dp"
                             android:text="Followers"
                             android:textColor="@color/black"
-                            android:textSize="15sp"
+                            android:textSize="@dimen/_12sdp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -182,7 +182,7 @@
                             android:gravity="center_horizontal"
                             android:text="0"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
+                            android:textSize="@dimen/_10sdp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -235,7 +235,7 @@
                     app:cardCornerRadius="8dp">
 
                     <LinearLayout
-                        android:layout_width="100dp"
+                        android:layout_width="@dimen/_80sdp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:padding="3dp">
@@ -250,7 +250,7 @@
                             android:layout_marginStart="5dp"
                             android:text="Post"
                             android:textColor="@color/black"
-                            android:textSize="15sp"
+                            android:textSize="@dimen/_12sdp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -261,7 +261,7 @@
                             android:gravity="center_horizontal"
                             android:text="0"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
+                            android:textSize="@dimen/_10sdp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -271,7 +271,7 @@
             <View
                 android:id="@+id/view3"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="@dimen/_2sdp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"

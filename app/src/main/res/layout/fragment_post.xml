@@ -5,30 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/Darkgrey"
+    android:background="@color/black"
     tools:context=".fragments.fragments.PostFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/Darkgrey">
+        android:background="@color/black">
 
 
 
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/_5sdp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:background="@color/Darkgrey"
+        android:background="@drawable/btn_following"
         android:layout_marginEnd="10dp"
         android:gravity="center_horizontal"
-        android:text="Create New Post"
+        android:text="Create New Post / Ask questions"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="@dimen/_15sdp"
         android:textStyle="bold" />
 
 
@@ -113,8 +115,8 @@
             android:hint="Heading"
             android:inputType="textPersonName"
             android:padding="10dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/Darkgrey" />
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey" />
 
     <ImageView
         android:id="@+id/ImgViewPost"
@@ -131,7 +133,7 @@
         <EditText
             android:id="@+id/etpost"
             android:layout_width="match_parent"
-            android:layout_height="207dp"
+            android:layout_height="@dimen/_190sdp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="40dp"
@@ -141,8 +143,8 @@
             android:gravity="start"
             android:hint="share something..."
             android:inputType="textPersonName"
-            android:padding="5dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/Darkgrey" />
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey" />
     </LinearLayout>
 </ScrollView>
