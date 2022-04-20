@@ -70,7 +70,6 @@ public class ProfileFragment extends Fragment {
 
         dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         dialog.setTitle("loading your profile ");
-        dialog.setMessage("Please wait a moment ");
         dialog.setCancelable(false);
         dialog.setCanceledOnTouchOutside(false);
 

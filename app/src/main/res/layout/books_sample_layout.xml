@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     android:backgroundTint="@color/black"
     app:cardElevation="15dp"
+    android:layout_gravity="center_horizontal"
     app:cardCornerRadius="15dp"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/stockCard"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/_300sdp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
 
@@ -42,7 +43,7 @@
                     <ImageView
                         android:id="@+id/stockImg1"
                         android:layout_width="match_parent"
-                        android:layout_height="117dp"
+                        android:layout_height="@dimen/_86sdp"
                         android:adjustViewBounds="true"
                         android:background="@color/Darkgrey"
                         android:src="@drawable/stockimg" />
@@ -82,13 +83,14 @@
 
                 <TextView
                     android:id="@+id/aboutCard1"
-                    android:layout_width="136dp"
-                    android:layout_height="130dp"
+                    android:layout_width="@dimen/_134sdp"
+                    android:layout_height="@dimen/_100sdp"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="16dp"
                     android:ellipsize="end"
                     android:maxLines="7"
+                    android:textSize="@dimen/_10sdp"
                     android:text="Investing is an important way to build wealth and save for the future.
                              Here’s what we should have learned about the stock market."
                     android:textColor="@color/white" />

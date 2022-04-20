@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.freedom20.Adapter.DashboardAdapter;
 import com.example.freedom20.Models.Dashboard;
@@ -30,7 +31,7 @@ public class homeFragment extends Fragment {
     FirebaseAuth auth;
     FirebaseDatabase database;
     DashboardAdapter dashboardAdapter;
-    ProgressDialog dialog;
+    ImageView startoffeed,endoffeed;
 
     public homeFragment() {
         // Required empty public constructor
@@ -43,7 +44,6 @@ public class homeFragment extends Fragment {
 
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
-        dialog = new ProgressDialog(getContext());
 
 
 
@@ -55,17 +55,8 @@ public class homeFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-
-        dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        dialog.setTitle("loading your profile ");
-        dialog.setMessage("Please wait a moment ");
-        dialog.setCancelable(false);
-        dialog.setCanceledOnTouchOutside(false);
-
-
-
-        dialog.show();
-
+        startoffeed = view.findViewById(R.id.beginfeed);
+        endoffeed = view.findViewById(R.id.endOffeed);
 
 
         dashboardRV = view.findViewById(R.id.dashboardRV);
@@ -85,13 +76,14 @@ public class homeFragment extends Fragment {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     DashboardList.clear();
+                    startoffeed.setVisibility(View.GONE);
                     for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                         Dashboard dashboard = dataSnapshot.getValue(Dashboard.class);
                         dashboard.setPostId(dataSnapshot.getKey());
                         DashboardList.add(dashboard);
                     }
+                    endoffeed.setVisibility(View.VISIBLE);
                     dashboardAdapter.notifyDataSetChanged();
-                    dialog.dismiss();
                 }
 
                 @Override

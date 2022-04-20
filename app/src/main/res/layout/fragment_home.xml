@@ -27,6 +27,13 @@
                 android:layout_height="60dp"
                 android:background="@color/Darkgrey"/>
 
+            <ImageView
+                android:id="@+id/beginfeed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/postappear"
+                android:visibility="visible"/>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/dashboardRV"
                 android:layout_width="match_parent"
@@ -35,6 +42,15 @@
                 android:background="@color/black"
                 android:nestedScrollingEnabled="false"
                 android:padding="26dp" />
+
+            <ImageView
+                android:id="@+id/endOffeed"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:src="@drawable/endodfeed"
+                android:scaleType="centerCrop"
+                android:visibility="gone"/>
+
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
