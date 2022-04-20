@@ -83,17 +83,17 @@
 
                 <TextView
                     android:id="@+id/aboutCard1"
-                    android:layout_width="@dimen/_134sdp"
+                    android:layout_width="@dimen/_100sdp"
                     android:layout_height="@dimen/_100sdp"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="16dp"
                     android:ellipsize="end"
                     android:maxLines="7"
-                    android:textSize="@dimen/_10sdp"
                     android:text="Investing is an important way to build wealth and save for the future.
                              Here’s what we should have learned about the stock market."
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp" />
 
 
                 <Button
