@@ -123,7 +123,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="1dp"
-        android:visibility="invisible"
+        android:visibility="gone"
         android:src="@drawable/ic_img_placeholder"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
