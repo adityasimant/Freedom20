@@ -97,6 +97,7 @@ public class PostFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 etMpost.setText(null);
+                etHpost.setText(null);
             }
         });
 
