@@ -5,11 +5,9 @@ public class Comment {
     private long commentedAt;
     private String commentedBy;
 
-    public Comment(String commentBody, long commentedAt, String commentedBy) {
-        this.commentBody = commentBody;
-        this.commentedAt = commentedAt;
-        this.commentedBy = commentedBy;
+    public Comment() {
     }
+
 
     public String getCommentBody() {
         return commentBody;

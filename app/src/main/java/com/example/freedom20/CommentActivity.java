@@ -6,11 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.freedom20.Models.Comment;
 import com.example.freedom20.Models.Dashboard;
 import com.example.freedom20.Models.User;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -18,9 +22,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.util.Date;
+
 public class CommentActivity extends AppCompatActivity {
     ImageView cmtProfilePic,ImgSend;
     TextView cmtHPost,cmtMPost,cmtAuthor;
+    EditText commentText;
     Intent intent;
     String postId,postedBy;
     FirebaseDatabase database;
@@ -39,6 +46,7 @@ public class CommentActivity extends AppCompatActivity {
         cmtMPost.findViewById(R.id.commentMpost);
         cmtProfilePic.findViewById(R.id.commentProfilepic);
         ImgSend = findViewById(R.id.commentSent);
+        commentText = findViewById(R.id.ETcomment);
 
         intent = getIntent();
         postId = intent.getStringExtra("postId");
@@ -80,6 +88,52 @@ public class CommentActivity extends AppCompatActivity {
         ImgSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Comment comment = new Comment();
+                comment.setCommentBody(commentText.getText().toString());
+                comment.setCommentedAt(new Date().getTime());
+                comment.setCommentedBy(auth.getUid());
+
+                database.getReference()
+                        .child("post")
+                        .child(postId)
+                        .child("comments")
+                        .push()
+                        .setValue(comment)
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                database.getReference()
+                                        .child("post")
+                                        .child(postId)
+                                        .child("commentCount")
+                                        .addListenerForSingleValueEvent(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                int commentCount = 0;
+                                                if (snapshot.exists()){
+                                                    commentCount = snapshot.getValue(Integer.class);
+
+                                                }
+                                                database.getReference()
+                                                        .child("post")
+                                                        .child(postId)
+                                                        .child("commentCount")
+                                                        .setValue(commentCount + 1).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                    @Override
+                                                    public void onSuccess(Void unused) {
+                                                        Toast.makeText(CommentActivity.this, "Added succesfullt", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                });
+                                            }
+
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError error) {
+
+                                            }
+                                        });
+                            }
+                        });
 
             }
         });
