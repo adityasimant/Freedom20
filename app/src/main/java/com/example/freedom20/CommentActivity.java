@@ -122,6 +122,7 @@ public class CommentActivity extends AppCompatActivity {
                                                         .setValue(commentCount + 1).addOnSuccessListener(new OnSuccessListener<Void>() {
                                                     @Override
                                                     public void onSuccess(Void unused) {
+                                                        commentText.setText("");
                                                         Toast.makeText(CommentActivity.this, "Added succesfullt", Toast.LENGTH_SHORT).show();
                                                     }
                                                 });
