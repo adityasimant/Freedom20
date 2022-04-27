@@ -88,6 +88,9 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, CommentActivity.class);
+                intent.putExtra("postId",model.getPostId());
+                intent.putExtra("postedBy",model.getPostedBy());
+                intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
         });
