@@ -119,7 +119,6 @@ public class MainActivity extends AppCompatActivity {
 
                    case R.id.nav_share:
                        break;
-
                   }
                   transaction1.commit();
                   return true;

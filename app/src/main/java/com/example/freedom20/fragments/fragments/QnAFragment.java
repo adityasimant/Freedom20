@@ -52,45 +52,47 @@ public class QnAFragment extends Fragment {
                 "https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/BookPDF%2FRich-Dad-Poor-Dad-eBook.pdf?alt=media&token=3fa75092-3eb5-45be-a07a-2783595a5ac7"));
 
  books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Fteachyoutoberich.jfif?alt=media&token=3ddba6f6-a6f9-4391-ab42-7107322d69aa"
-                ,"I Will Teach You To Be Rich","Ramit Sethi","link"));
+                ,"I Will Teach You To Be Rich","Ramit Sethi",
+         "https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/BookPDF%2FI-will-teach-you-to-be-rich.pdf?alt=media&token=8f608169-3f78-4adb-8d7d-33f9b72e1f74"));
 
  books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FtheInvestmentAns.jfif?alt=media&token=a7775af4-9127-4c95-ac7b-dc3c7fd944b5"
-                ,"The Investment Answer","Daniel Goldie and Gordon Murray","link"));
+                ,"The Investment Answer","Daniel Goldie and Gordon Murray",
+         "https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/BookPDF%2Fthe-investment-answer.pdf?alt=media&token=09aef3ad-a813-40ad-a153-d0a2e93e4160"));
 
  books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Fmillionainextdoor.jfif?alt=media&token=849ab0ed-17f9-4bf9-a41e-5dfb057365b2"
-                ,"The Millionaire Next Door","Thomas J. Stanley and William D. Danko","link"));
+                ,"The Millionaire Next Door","Thomas J. Stanley and William D. Danko",
+         "https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/BookPDF%2FThe%20Millionaire%20Next%20Door%20%5BBook%5D-MANTESH.PDF%20-%20Davidbeitler.com%20(%20PDFDrive%20).pdf?alt=media&token=5b62a9cc-d4b4-44a4-874a-a1c6bbfe404f"));
 
  books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Frichhabbits.jfif?alt=media&token=2305267c-ecd0-47a5-b3da-a619e4475b02"
-                ,"Rich Habits: The Daily Success Habits Of Wealthy Individuals","Thomas Corley","link"));
-
- books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Ffinancially%20fearless.jfif?alt=media&token=7d7b6b65-656a-45d6-8e37-eaa11e8c3654"
-                ,"Financially Fearless: The LearnVest Program For Taking Control Of Your Money","Alexa Von Tobel","link"));
+                ,"Rich Habits: The Daily Success Habits Of Wealthy Individuals","Thomas Corley",
+         "https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/BookPDF%2Frich-habbits.pdf?alt=media&token=3a92552c-062a-41bd-a041-6f9a5601c573"));
 
 books1list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2FThknGrow.png?alt=media&token=e7e3938e-5b70-4a61-b144-4f650d732248"
-                ,"Think and grow rich ","Napoleon Hill","link"));
+                ,"Think and grow rich ","Napoleon Hill",
+        "https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/BookPDF%2FThink%20And%20Grow%20Rich%20(%20PDFDrive%20).pdf?alt=media&token=f07dac82-1415-4034-b48c-ea4e2ee9cf8d"));
 
         //self help books
         books2list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Fcalender%20of%20wisdon.webp?alt=media&token=d4e63f55-01e2-4bdc-b6a2-3c9f659905c3",
                 "A Calendar of Wisdom","Leo Tolstoj",
-                "link"));
+                "https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/BookPDF%2FA-Calendar-of-Wisdom.pdf?alt=media&token=d99de5e1-c26c-4f55-b966-7e14cd6a47d6"));
         books2list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Fatomic%20habbits.webp?alt=media&token=3808c1fb-7feb-48c5-ae4d-e483fc376e0f",
                 "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones","James Clea",
-                 "link"));
+                 "https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/BookPDF%2Fatomic-habits.pdf?alt=media&token=bb151891-295c-4594-acf2-0767db76f6dd"));
         books2list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Falchemist.webp?alt=media&token=ef5b2c88-b5c4-4551-8701-2701b0833705",
                 "The Alchemist"," Paulo Coelho",
-                "link"));
+                "https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/BookPDF%2FTHE-ALCHEMIST-pdf-free-download.pdf?alt=media&token=442dd72d-da30-429c-8ec9-6bd07bbafd22"));
         books2list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Fwarnpeace.webp?alt=media&token=d9f01f86-cf2c-492e-a7fe-23f4b0835c16",
                 "War and Peace","Leo Tolstoy",
-                "link"));
+                "https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/BookPDF%2Fwar-and-peace.pdf?alt=media&token=fe205f95-c41c-43fb-9254-c66aca862bd3"));
         books2list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Fmansearchformeaning.webp?alt=media&token=cf8e0268-ebcd-4ad5-bac6-7a8b0e2c6c10",
                 "Man's Search for Meaning","Viktor Frankl",
-                "link"));
+                "https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/BookPDF%2FMans-Search-For-Meaning.pdf?alt=media&token=e1993458-6fc2-4399-8d47-ae4b93aae27e"));
         books2list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Fegoisenemy.webp?alt=media&token=cd561273-717f-4209-ac12-bb0582cb42f9",
                 "Ego Is the Enemy","Ryan Holiday",
-                "link"));
+                "https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/BookPDF%2FEgo%20is%20the%20Enenmy%20(%20PDFDrive%20).pdf?alt=media&token=cf4bce87-4062-40fa-b5c8-3fb5c64a6dee"));
         books2list.add(new bookModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/bookImgs%2Ffooledbyrandomness.webp?alt=media&token=d62d06d6-a969-43aa-9f8b-2aa501628555",
                 "Fooled by Randomness","Nassim Nicholas Taleb",
-                "link"));
+                "https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/BookPDF%2FFooled-by-Randomness-Role-of-Chance-in-Markets-and-Life-PROPER1.pdf?alt=media&token=363c755d-ccdd-4d43-83f2-3c67a3d2e957"));
 
         // courses
         booksList.add(new LogsModel("https://firebasestorage.googleapis.com/v0/b/freedom20-1dc06.appspot.com/o/DocsImages%2FZ1.png?alt=media&token=77c96780-0d39-4b27-b8b4-d0c9de85012f",

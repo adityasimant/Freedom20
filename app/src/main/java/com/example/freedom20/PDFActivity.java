@@ -44,7 +44,7 @@ public class PDFActivity extends AppCompatActivity {
 
             dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
             dialog.setTitle("Please wait a moment");
-            dialog.setMessage("Your book is loading ");
+            dialog.setMessage("Download time may vary with book size ");
             dialog.setCancelable(false);
             dialog.setCanceledOnTouchOutside(false);
             dialog.show();
