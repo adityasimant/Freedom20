@@ -130,7 +130,7 @@ public class CommentActivity extends AppCompatActivity {
 
                                             @Override
                                             public void onCancelled(@NonNull DatabaseError error) {
-
+                                                Toast.makeText(CommentActivity.this, "An error occured", Toast.LENGTH_SHORT).show();
                                             }
                                         });
                             }
