@@ -2,6 +2,8 @@ package com.example.freedom20;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.freedom20.Adapter.commentAdapter;
 import com.example.freedom20.Models.Comment;
 import com.example.freedom20.Models.Dashboard;
 import com.example.freedom20.Models.User;
@@ -22,6 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class CommentActivity extends AppCompatActivity {
@@ -32,6 +36,8 @@ public class CommentActivity extends AppCompatActivity {
     String postId,postedBy;
     FirebaseDatabase database;
     FirebaseAuth auth;
+    ArrayList<Comment>list = new ArrayList<>();
+    RecyclerView cmtRV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +47,10 @@ public class CommentActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
 
-        cmtAuthor.findViewById(R.id.commentAuthor);
-        cmtHPost.findViewById(R.id.commentHpost);
-        cmtMPost.findViewById(R.id.commentMpost);
-        cmtProfilePic.findViewById(R.id.commentProfilepic);
+        cmtAuthor = findViewById(R.id.commentAuthor);
+        cmtHPost = findViewById(R.id.commentHpost);
+        cmtMPost = findViewById(R.id.commentMpost);
+        cmtProfilePic = findViewById(R.id.commentProfilepic);
         ImgSend = findViewById(R.id.commentSent);
         commentText = findViewById(R.id.ETcomment);
 
@@ -135,6 +141,33 @@ public class CommentActivity extends AppCompatActivity {
                                         });
                             }
                         });
+
+            }
+        });
+
+        commentAdapter adapter = new commentAdapter(this,list);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        cmtRV = findViewById(R.id.commentRV);
+        cmtRV.setLayoutManager(layoutManager);
+        cmtRV.setAdapter(adapter);
+
+        database.getReference().
+                child("post")
+                .child(postId)
+                .child("comments").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                list.clear();
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    Comment comment = dataSnapshot.getValue(Comment.class);
+                    list.add(comment);
+
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });

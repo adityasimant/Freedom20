@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -71,11 +72,13 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.view
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 User user = snapshot.getValue(User.class);
-                Picasso.get().load(user.getProfile())
-                        .placeholder(R.drawable.ic_img_placeholder)
-                        .into(holder.ProfileImage);
-                holder.name.setText(user.getName());
-                holder.bio.setText(user.getUsername());
+                if (user != null) {
+                    Picasso.get().load(user.getProfile())
+                            .placeholder(R.drawable.ic_img_placeholder)
+                            .into(holder.ProfileImage);
+                    holder.name.setText(user.getName());
+                    holder.bio.setText(user.getUsername());
+                }
             }
 
             @Override
