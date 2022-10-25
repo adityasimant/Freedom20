@@ -7,3 +7,7 @@ Blogs,QnA,etc.</p>
 ## Working 
 
 Freedom 20 uses [Firebase](https://firebase.google.com/) for user-authentication and realtime database. It also uses [News Api](https://newsapi.org/) for latest financial news.
+
+## Contributing
+
+Do you think you can improve our app in any means? You can add any kind of value, fix bugs or point out issues. Please read contributing guide and code of conduct before proceeding.
