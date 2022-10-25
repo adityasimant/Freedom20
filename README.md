@@ -10,4 +10,4 @@ Freedom 20 uses [Firebase](https://firebase.google.com/) for user-authentication
 
 ## Contributing
 
-Do you think you can improve our app in any means? You can add any kind of value, fix bugs or point out issues. Please read contributing guide and code of conduct before proceeding.
+Do you think you can improve our app in any means? You can add any kind of value, fix bugs or point out issues. Please read [contributing guide](https://github.com/adityasimant/Freedom20/blob/master/contributing.md) before proceeding.
