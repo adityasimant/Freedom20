@@ -13,7 +13,7 @@
         android:layout_height="75dp"
         android:layout_gravity="center_horizontal"
         android:contentDescription="@string/app_name"
-        android:src="@mipmap/ic_logo1_round" />
+        android:src="@mipmap/applogo_round" />
     <TextView
         android:id="@+id/NavName"
         android:layout_width="wrap_content"
