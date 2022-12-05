@@ -46,25 +46,6 @@ public class commentAdapter extends  RecyclerView.Adapter<commentAdapter.viewHol
                 holder.date.setText(comment.getCommentedAt() + "");
 
 
-//                FirebaseDatabase.getInstance().getReference()
-//                        .child("user")
-//                        .child(comment.getCommentBody()).addListenerForSingleValueEvent(new ValueEventListener(){
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                        User user = snapshot.getValue(User.class);
-////                       Picasso.get().load(user.getProfile())
-////                        .placeholder(R.drawable.ic_img_placeholder)
-////                        .into(holder.cmtProfilePic);
-//                        holder.cmtbody.setText(comment.getCommentBody());
-////                        holder.cmtName.setText(user.getName());
-//
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError error) {
-//
-//                    }
-//                });
 
                 FirebaseDatabase.getInstance().getReference().child("user")
                         .child(comment.getCommentedBy()).addListenerForSingleValueEvent(new ValueEventListener() {

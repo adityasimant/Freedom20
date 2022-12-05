@@ -17,6 +17,12 @@
     <color name="Darkgrey">#101010</color>
     <color name="darkBlue">#023047</color>
 
+    <color name="primaryDark">#1D1F2B</color>
+    <color name="cherryRed">#E42446</color>
+    <color name="priaryLight">#FDFDFD</color>
+
+
+
 
 
 </resources>

@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Freedom20" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/YELLOW</item>
+        <item name="colorPrimary">@color/cherryRed</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->

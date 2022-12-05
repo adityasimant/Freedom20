@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/primaryDark"
     tools:context=".MainActivity">
 
 
@@ -23,7 +23,9 @@
         android:id="@+id/readableBottomBar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:backgroundTint="@color/Darkgrey"
+        app:itemIconTint="@color/cherryRed"
+        android:background="@color/priaryLight"
+        android:backgroundTint="@color/primaryDark"
         app:circularflow_defaultRadius="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Darkgrey"
+    android:background="@color/primaryDark"
     android:orientation="vertical"
     tools:context=".loginActivity">
 
@@ -51,6 +51,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/loginet"
+        android:padding="@dimen/_10sdp"
         android:layout_marginEnd="20dp"
         android:ems="10"
         android:hint="Email"
@@ -70,6 +72,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
+        android:background="@drawable/loginet"
+        android:padding="@dimen/_10sdp"
         android:ems="10"
         android:textColor="@color/white"
         android:hint="Password"
@@ -83,16 +87,17 @@
 
     <Button
         android:id="@+id/btnSignin"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:backgroundTint="@color/YELLOW"
+        android:backgroundTint="@color/cherryRed"
         android:text="Login"
-        android:textColor="@color/Darkgrey"
+        android:textColor="@color/priaryLight"
         android:textSize="16dp"
         android:textStyle="bold"
+        android:padding="@dimen/_10sdp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -128,7 +133,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="SignUp here!"
-            android:textColor="@color/YELLOW"
+            android:textColor="@color/priaryLight"
             android:textSize="17dp"
             android:textStyle="bold" />
     </LinearLayout>
