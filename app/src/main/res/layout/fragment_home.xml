@@ -11,7 +11,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/Darkgrey">
+        android:background="@color/primaryDark">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,7 +25,7 @@
                 android:id="@+id/view4"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:background="@color/Darkgrey"/>
+                android:background="@color/primaryDark"/>
 
             <ImageView
                 android:id="@+id/beginfeed"
@@ -41,7 +41,7 @@
                 android:layout_marginBottom="4dp"
                 android:background="@color/black"
                 android:nestedScrollingEnabled="false"
-                android:padding="26dp" />
+                android:padding="8dp" />
 
             <ImageView
                 android:id="@+id/endOffeed"

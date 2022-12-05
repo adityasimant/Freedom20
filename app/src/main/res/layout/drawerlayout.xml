@@ -18,7 +18,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/Darkgrey"
+            android:background="@color/primaryDark"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
     </LinearLayout>
     <com.google.android.material.navigation.NavigationView

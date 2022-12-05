@@ -5,7 +5,7 @@
     android:layout_height="@dimen/_230sdp"
     android:layout_margin="0dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:backgroundTint="@color/Darkgrey"
+    android:backgroundTint="@color/primaryDark"
     app:cardCornerRadius="0dp"
     >
     <androidx.cardview.widget.CardView
@@ -21,7 +21,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black"
+        android:background="@color/primaryDark"
         android:orientation="vertical">
         <TextView
             android:id="@+id/mainHeading"
@@ -70,8 +70,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Read more"
+            android:textSize="@dimen/_13sdp"
             android:textStyle="bold"
-            android:textColor="@color/YELLOW"
+            android:textColor="@color/cherryRed"
             android:gravity="center_horizontal"
             android:padding="2dp"
             />

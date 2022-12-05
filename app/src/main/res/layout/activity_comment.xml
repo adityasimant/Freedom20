@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Darkgrey"
+    android:background="@color/primaryDark"
     tools:context=".CommentActivity">
 
     <androidx.core.widget.NestedScrollView

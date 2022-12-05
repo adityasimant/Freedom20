@@ -11,7 +11,7 @@
         android:layout_width="130dp"
         android:layout_height="210dp"
         android:layout_margin="5dp"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/primaryDark"
         app:cardCornerRadius="7dp"
         app:cardElevation="20dp">
 
@@ -61,7 +61,7 @@
                 android:gravity="center_horizontal"
                 android:layout_gravity="center_horizontal"
                 android:textAlignment="center"
-                android:textColor="@color/YELLOW"
+                android:textColor="@color/cherryRed"
                 android:textSize="10dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>

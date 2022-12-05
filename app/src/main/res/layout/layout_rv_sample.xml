@@ -13,7 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/Darkgrey"
+        android:background="@color/primaryDark"
         android:orientation="vertical">
 
         <LinearLayout
@@ -52,7 +52,7 @@
                 android:layout_width="313dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/Darkgrey"
+                android:background="@color/primaryDark"
                 android:orientation="vertical">
 
                 <TextView
@@ -62,7 +62,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="16dp"
-                    android:background="@color/Darkgrey"
+                    android:background="@color/primaryDark"
                     android:padding="5dp"
                     android:text="Alison Parker"
                     android:textColor="@color/white"
@@ -79,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="7dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@color/Darkgrey"
+                    android:background="@color/primaryDark"
                     android:padding="3dp"
                     android:text="Professional Trader"
                     android:textColor="@color/white"
@@ -104,14 +104,14 @@
             android:id="@+id/PostHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/Darkgrey"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            android:paddingStart="5dp"
             android:layout_margin="3dp"
+            android:background="@color/primaryDark"
             android:maxHeight="100dp"
+            android:paddingStart="5dp"
             android:text="This is my first post"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/ImgPost"
@@ -133,12 +133,12 @@
             android:layout_margin="3dp"
 
              />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/Darkgrey"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_horizontal"
+            android:background="@color/primaryDark"
+            android:paddingStart="@dimen/_10sdp"
             android:orientation="horizontal">
 
             <TextView
@@ -146,11 +146,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:background="@color/Darkgrey"
+                android:background="@color/primaryDark"
                 android:drawableLeft="@drawable/upvote"
                 android:drawablePadding="10dp"
-                android:padding="4dp"
                 android:gravity="center_vertical"
+                android:padding="4dp"
                 android:text="77"
                 android:textColor="@color/white"
                 android:textSize="16sp"
@@ -163,11 +163,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/Darkgrey"
+                android:background="@color/primaryDark"
                 android:drawableLeft="@drawable/ic_baseline_comment_24"
                 android:drawablePadding="10dp"
-                android:padding="5dp"
                 android:gravity="center_vertical"
+                android:padding="5dp"
                 android:text="1"
                 android:textColor="@color/white"
                 android:textSize="16sp"
@@ -175,25 +175,6 @@
                 app:layout_constraintStart_toEndOf="@+id/idUpvote"
                 app:layout_constraintTop_toBottomOf="@+id/post" />
 
-            <Button
-                android:id="@+id/btnShare"
-                android:layout_width="41dp"
-                android:layout_height="38dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="5dp"
-                android:backgroundTint="@color/YELLOW"
-                android:drawableLeft="@drawable/ic_baseline_arrow_right_alt_24"
-                android:gravity="center_vertical"
-                android:paddingLeft="5dp"
-                android:textColor="@color/green"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:iconPadding="2dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.444"
-                app:layout_constraintStart_toEndOf="@+id/idComment"
-                app:layout_constraintTop_toBottomOf="@+id/post"
-                tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
 
     </LinearLayout>
