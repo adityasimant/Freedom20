@@ -34,6 +34,30 @@ Freedom20 is a social network to connect, learn, share and ask questions. This m
 - [Firebase](https://firebase.google.com/)
 - [News Api](https://newsapi.org/)
 
+
+
+### Step-up guide 
+
+Start by cloning 
+
+```bash
+  git clone https://github.com/adityasimant/Freedom20.git
+```
+
+- Firebase 
+
+Freedom20 uses Firebase as Backend Storage and Authentication 
+
+- [FireBase](https://firebase.google.com/docs/android/setup#:~:text=Open%20the%20Firebase%20Assistant%3A%20Tools,your%20Android%20project%20with%20Firebase.)
+
+Enable Sign-in with Email and password and Google Sign-in 
+
+- [Sign-in methods](https://firebase.google.com/docs/auth/android/password-auth)
+
+
+
+
+
 ## Contributing
 
 Do you think you can improve our app in any means? You can add any kind of value, fix bugs or point out issues. Please read [contributing guide](https://github.com/adityasimant/Freedom20/blob/master/contributing.md) before proceeding.
