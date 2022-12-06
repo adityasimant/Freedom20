@@ -15,14 +15,29 @@
 </p>
 
 
+Freedom20 is a social network to connect, learn, share and ask questions. This mobile application contains free books, blogs from zerodha varsity and latest finance news updated dynamically.
 
-<p>Freedom20 is a android based social network which helps young minds understand fianacial freedom, startup culture and much more through 
-Blogs,QnA,etc.</p>
+## Requirements 
+- Android studio 4.1.1
+- Android SDK 32
+- Supports API level +21
 
-## Working 
 
-Freedom 20 uses [Firebase](https://firebase.google.com/) for user-authentication and realtime database. It also uses [News Api](https://newsapi.org/) for latest financial news.
+## Made with
+* Java - high-level, class-based, object-oriented programming language
+* Retrofit - A type-safe HTTP client for Android and Java
+* Gson - A Java serialization/deserialization library to convert Java Objects into JSON and back
+* Picasso - A powerful image downloading and caching library for Android
+
+
+## External resources used 
+- [Firebase](https://firebase.google.com/)
+- [News Api](https://newsapi.org/)
 
 ## Contributing
 
 Do you think you can improve our app in any means? You can add any kind of value, fix bugs or point out issues. Please read [contributing guide](https://github.com/adityasimant/Freedom20/blob/master/contributing.md) before proceeding.
+
+## Release
+
+[Download apk](https://github.com/adityasimant/Freedom20/releases/download/v1/freedom20.apk) ( For Android )
